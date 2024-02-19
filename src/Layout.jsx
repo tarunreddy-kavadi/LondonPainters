@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import Navbar from './Components/Navbar';
+import Banner from './Components/Banner';
 
-const Layout = () => {
+const Layout = ({children}) => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Navbar />
+      {children}
+    <Banner />
+      <Footer />
+      </>
   )
 }
 
