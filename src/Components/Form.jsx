@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import emailjs from '@emailjs/browser'
 
 const Conatiner = styled.div`
-height: 20rem;
-width:15rem;
+height: 37rem;
+width:45rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
