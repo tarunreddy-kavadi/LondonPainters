@@ -4,26 +4,39 @@ import emailjs from '@emailjs/browser'
 
 const Conatiner = styled.div`
 height: 37rem;
-width:45rem;
+width:50rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
 padding:2rem;
 border-radius: 1rem;
 background-color: white;
-    border: 1px solid black;
-    .h1{
-        font-weight: normal;
+border: 1px solid black;
+    h3{
+        display: flex;
+        justify-content: center;    
     }
-    .form{
+    form{
         display: flex;
         flex-direction:column;
-        justify-content: space-between; 
     }
     .con{
         margin: 0.5rem;
-        height: 2rem;
-
+        height: 3rem;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        height: 2.5rem;
+        width: 7rem;
+        margin: 0.5rem;
+        background-color: blue;
+        color:white;
+        font-weight: bold;
+        &:hover{
+        background-color: white;
+        color:blue;
+        }
     }
 
 `
@@ -51,7 +64,7 @@ const Form = () => {
       <input placeholder='Phone Number' type="tel" name="user_phone" className='con' />
       <input placeholder='Subject' type="text" name="subject" className='con' />
       <textarea  placeholder="message" name="message" className='con' />
-      <input type="submit" value="Send" />
+      <input type="submit" value="Send" className='btn' />
       </form>
      </Conatiner>
   )

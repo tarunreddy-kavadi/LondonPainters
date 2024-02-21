@@ -5,7 +5,6 @@ const Container = styled.div`
 height: 15rem;
 border: 1px solid black;
 display:flex;
-
 align-items:center;
 `
 const Left = styled.div`
