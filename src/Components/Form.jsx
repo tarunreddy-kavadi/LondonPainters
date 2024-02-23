@@ -4,7 +4,8 @@ import emailjs from '@emailjs/browser'
 
 const Conatiner = styled.div`
 height: 37rem;
-width:50rem;
+width:30rem;
+position: relative;
 display: flex;
 flex-direction: column;
 justify-content: center;
