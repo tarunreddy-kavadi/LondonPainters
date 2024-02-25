@@ -5,15 +5,16 @@ import emailjs from '@emailjs/browser'
 const Conatiner = styled.div`
 height: 37rem;
 width:30rem;
-position: relative;
+
 display: flex;
 flex-direction: column;
 justify-content: center;
 padding:2rem;
 border-radius: 1rem;
 background-color: white;
-border: 1px solid black;
-    h3{
+box-shadow: 0px 104px 104px -40px rgba(0, 0, 0, 0.16);
+
+h3{
         display: flex;
         justify-content: center;    
     }

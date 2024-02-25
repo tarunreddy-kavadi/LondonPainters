@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Form from './Form'
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
-import { ReactDOM } from 'react-dom';
-import ModalVideo from 'react-modal-video';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 
@@ -33,49 +32,43 @@ const Esti = styled.div`
     `
 const Text = styled.div`
         display:flex;
-        width:60%;
+        width:50%;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 5rem;
         
     `
 const Icons = styled.div`
+        display:flex;
+        flex-direction: row;
         padding-top: 5rem;
-         
-        .modalView {
-          padding-bottom: 20rem;
-        }
     `;
 const BgFrame = styled.div`
-       position: relative;
-       display:flex;
-        padding-left: 5rem;
-        align-items: center;
-        background-color: black;
-        height:100vh;
-        width:30rem;
-        opacity: .9;
-        translate: 3rem -30rem;
-
-    `
-const Button = styled.button`
-  
- 
+        position: absolute;
+        display:flex;
+        padding:6rem 5rem 0rem 0rem;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        height:35rem;
+        width:65rem;
+        translate: -1rem -34rem; 
     `;
 
+const Button = styled.button`  
+    `;
 
 const Introduction = () => {
    const [open, setOpen] = useState(false);
     const videoModal = (props) => {
         return <BgFrame>
-            <button onClick={() => setOpen(false)} style={{ position: 'relative', height: '5rem', width: '5rem', translate: '42rem -10rem' }}>close</button>
-            <iframe
+            <button onClick={() => setOpen(false)} style={{ position: 'relative', height: '3rem', width: '3rem', borderRadius: '10rem', opacity:'0.8', translate: '57rem -3rem',background:'transparent' }}><CloseIcon style={{color:'white'}}/></button>
+            <iframe 
             src={props}
             title='YouTube'
-            width="500"
-            height="400"       
+            width="800"
+            height="400" 
+            
         >
         </iframe>
             </BgFrame>
@@ -91,7 +84,8 @@ const Introduction = () => {
                 <h1 style={{fontSize:'2rem'}}>Your Exterior and Interior Painting Providers</h1>
                 <h3>Universal Painters offer a complete painting and decorating service for completely transforming your home or business!</h3>
                 <p>With over 30 years of experience in the industry, we bring a wealth of knowledge and expertise to every job we undertake. Our extensive experience allows us to tackle even the most complex projects with confidence, ensuring exceptional results that exceed your expectations.</p>
-                 <Icons>
+                
+                <Icons>
                     <a href="tel:123456789"><PhoneEnabledIcon /></a>
                     <h3>Call us today for more information</h3>
                     <h2>0800 756 6653</h2>
@@ -104,11 +98,9 @@ const Introduction = () => {
                 classNames="modalView"
                             /> */}
                     {open ? videoModal("https://www.youtube.com/embed/eI4an8aSsgw") : null}
-                    <Button  onClick={() => setOpen(!open)} ><YouTubeIcon /></Button>
-                    
-                    
+                    <Button  onClick={() => setOpen(!open)} ><YouTubeIcon /></Button>    
                     </Icons>
-            </Text>
+                </Text>
             <Form />
         </Esti>
        
