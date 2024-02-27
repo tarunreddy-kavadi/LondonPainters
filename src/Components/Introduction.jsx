@@ -59,37 +59,37 @@ const Button = styled.button`
     `;
 
 const Introduction = () => {
-   const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false);
     const videoModal = (props) => {
         return <BgFrame>
-            <button onClick={() => setOpen(false)} style={{ position: 'relative', height: '3rem', width: '3rem', borderRadius: '10rem', opacity:'0.8', translate: '57rem -3rem',background:'transparent' }}><CloseIcon style={{color:'white'}}/></button>
-            <iframe 
-            src={props}
-            title='YouTube'
-            width="800"
-            height="400" 
-            
-        >
-        </iframe>
-            </BgFrame>
+            <button onClick={() => setOpen(false)} style={{ position: 'relative', height: '3rem', width: '3rem', borderRadius: '10rem', opacity: '0.8', translate: '57rem -3rem', background: 'transparent' }}><CloseIcon style={{ color: 'white' }} /></button>
+            <iframe
+                src={props}
+                title='YouTube'
+                width="800"
+                height="400"
+
+            >
+            </iframe>
+        </BgFrame>
     }
-    return <Container> 
+    return <Container>
         <Intro>
             <h3 >YOUR LOCAL PAINTING SERVICE</h3>
             <h1>The Residential, Commerical and Industrial Painting Specialist</h1>
-            <p>We provide Exterior Painting, Rendering, Insulation and Interior Painting solutions for Residential, Commercial and Industrial customers across London and the Home Counties.    </p> 
+            <p>We provide Exterior Painting, Rendering, Insulation and Interior Painting solutions for Residential, Commercial and Industrial customers across London and the Home Counties.    </p>
         </Intro>
         <Esti>
-        <Text>
-                <h1 style={{fontSize:'2rem'}}>Your Exterior and Interior Painting Providers</h1>
+            <Text>
+                <h1 style={{ fontSize: '2rem' }}>Your Exterior and Interior Painting Providers</h1>
                 <h3>Universal Painters offer a complete painting and decorating service for completely transforming your home or business!</h3>
                 <p>With over 30 years of experience in the industry, we bring a wealth of knowledge and expertise to every job we undertake. Our extensive experience allows us to tackle even the most complex projects with confidence, ensuring exceptional results that exceed your expectations.</p>
-                
+
                 <Icons>
                     <a href="tel:123456789"><PhoneEnabledIcon /></a>
                     <h3>Call us today for more information</h3>
                     <h2>0800 756 6653</h2>
-                        {/* <ModalVideo
+                    {/* <ModalVideo
 				channel="youtube"
 				youtube={{ mute: 0, autoplay: 0 }}
 				isOpen={open}
@@ -98,16 +98,16 @@ const Introduction = () => {
                 classNames="modalView"
                             /> */}
                     {open ? videoModal("https://www.youtube.com/embed/eI4an8aSsgw") : null}
-                    <Button  onClick={() => setOpen(!open)} ><YouTubeIcon /></Button>    
-                    </Icons>
-                </Text>
+                    <Button onClick={() => setOpen(!open)} ><YouTubeIcon /></Button>
+                </Icons>
+            </Text>
             <Form />
         </Esti>
-       
 
-        
-        
-  </Container>
+
+
+
+    </Container>
 }
 
 export default Introduction

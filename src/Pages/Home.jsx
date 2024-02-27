@@ -4,6 +4,8 @@ import Footer from '../Components/Footer'
 import Banner from '../Components/Banner'
 import Introduction from '../Components/Introduction'
 import PromoImages from '../Components/PromoImages'
+import Cards from '../Components/Cards'
+import Reviews from '../Components/Reviews'
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <Navbar />
       <Introduction />
       <PromoImages />
+      <Cards />
+      <Reviews />
       <Banner />
       <Footer />
     </div>

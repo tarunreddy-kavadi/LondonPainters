@@ -40,25 +40,25 @@ const Footer = () => {
         </Left>
         <Center>
             Aylesbury, Buckinghamshire
-0800 756 6653
-+ (44) 7713 697961
-info@universalpainters.co.uk
+            0800 756 6653
+            + (44) 7713 697961
+            info@universalpainters.co.uk
         </Center>
         <Right>
             Commercial Contracts
-Damp Solutions
-Internal Insulation Paints
-K-Rend Silicone Renders
-Painting and Decorating
-Thermal Cork Insulation
+            Damp Solutions
+            Internal Insulation Paints
+            K-Rend Silicone Renders
+            Painting and Decorating
+            Thermal Cork Insulation
         </Right>
         <Right1>
             Oxfordshire
-Hertfordshire
-London
-Buckinghamshire
+            Hertfordshire
+            London
+            Buckinghamshire
         </Right1>
-  </Container>
+    </Container>
 }
 
 export default Footer
