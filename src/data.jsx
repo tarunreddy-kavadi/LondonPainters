@@ -128,3 +128,29 @@ export const ExperienceData = [
 
     },
 ]
+export const ReviewData = [
+    {
+        id: 1,
+        title: "Painted alley wall 75 Verified Review",
+        desc: "Very happy with the work Would have them back again Will recommend them to family and friends",
+        loc: "HP1 December 2023"
+    },
+    {
+        id: 2,
+        title: "Painted alley wall 75 Verified Review",
+        desc: "Very happy with the work Would have them back again Will recommend them to family and friends",
+        loc: "HP1 December 2023"
+    },
+    {
+        id: 3,
+        title: "Painted alley wall 75 Verified Review",
+        desc: "Very happy with the work Would have them back again Will recommend them to family and friends",
+        loc: "HP1 December 2023"
+    },
+    {
+        id: 4,
+        title: "Painted alley wall 75 Verified Review",
+        desc: "Very happy with the work Would have them back again Will recommend them to family and friends",
+        loc: "HP1 December 2023"
+    },
+]
