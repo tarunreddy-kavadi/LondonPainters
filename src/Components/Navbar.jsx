@@ -26,7 +26,9 @@ font-size: 2rem;
 text-decoration:none;
 word-break: break-all;
 padding: 3rem
-}
+};
+
+
 `
 const Estimate = styled(Link)`
 height: 4rem;
@@ -45,19 +47,21 @@ color:white;
 }
 `
 const Navbar = () => {
-    return <Container> 
+    return <Container>
         <Title>
             London Painters
         </Title>
         <Navigation>
             <Link to="/" className='link' >Home</Link>
-            <Link to="/aboutUs" className='link' >AboutUs</Link>
-            <Link to= "/contactUs" className='link' >ContactUs</Link>
+            <Link to="/aboutUs" className='link' >AboutUs </Link>
+            <Link to="/aboutUs" className='dropdown' >Faq </Link>
+            <Link to="/aboutUs" className='dropdown' >review </Link>
+            <Link to="/contactUs" className='link' >ContactUs</Link>
         </Navigation>
         <Estimate>
             Free Estimation
         </Estimate>
-  </Container>
+    </Container>
 }
 
 export default Navbar

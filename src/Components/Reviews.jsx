@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { CommentData } from '../data'
 
 const Container = styled.div`
-height: 100rem;
+height: 120rem;
 display: flex;
 flex-direction: column;
 `;
@@ -27,8 +27,6 @@ h2{
 
     font-size:1.9rem;
 };
-
-
 `;
 const CommentContianer = styled.div`
     display: flex;
@@ -47,9 +45,28 @@ const CommentCard = styled.div`
         width:3rem;
         border-radius: 12rem;
     };
+`;
+const Accreditations = styled.div`
+display: flex;
+flex-direction: row;
+padding: 9rem 15rem 0rem 15rem;
+`;
+const Image1 = styled.img`
+height: 25rem;
+width: 30rem;
     
-
-
+`;
+const Desc = styled.div`
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding:0rem 5rem 0rem 5rem;
+    h1{
+        font-size: 3rem;
+    };
+    p{
+        font-size: 1.1rem;
+    }
 `
 
 const Reviews = () => {
@@ -81,6 +98,13 @@ const Reviews = () => {
                 </CommentCard>
             })}
         </CommentContianer>
+        <Accreditations>
+            <Image1 src="https://universalpainters.co.uk/wp-content/uploads/2023/09/7105ecc280de2e40aa63c1709e4e47bc.png-1536x960.webp" alt='house' />
+            <Desc>
+                <h1>Accreditations</h1>
+                <p>At Universal Painting Company, we take pride in our commitment to excellence and professionalism in the world of painting services. Our dedication to quality and customer satisfaction has earned us a range of prestigious accreditations, affirming our position as a trusted leader in the industry. These accreditations serve as a testament to our unwavering standards of craftsmanship and commitment to ethical business practices.</p>
+            </Desc>
+        </Accreditations>
     </Container >
 }
 

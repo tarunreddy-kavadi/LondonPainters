@@ -95,3 +95,36 @@ export const CommentData = [
         user: "Chris"
     },
 ]
+
+export const ExperienceData = [
+    {
+        id: 1,
+        desc: "30 Years Experience",
+
+    },
+    {
+        id: 2,
+        desc: "All Work 100% Guaranteed",
+
+    },
+    {
+        id: 3,
+        desc: "Fully Insured Company",
+
+    },
+    {
+        id: 4,
+        desc: "No Call Out Charges",
+
+    },
+    {
+        id: 5,
+        desc: "No Hidden Costs",
+
+    },
+    {
+        id: 6,
+        desc: "100% Recommend Us",
+
+    },
+]

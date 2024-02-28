@@ -6,6 +6,7 @@ import Introduction from '../Components/Introduction'
 import PromoImages from '../Components/PromoImages'
 import Cards from '../Components/Cards'
 import Reviews from '../Components/Reviews'
+import Quote from '../Components/Quote'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Cards />
       <Reviews />
       <Banner />
+      <Quote />
       <Footer />
     </div>
   )
