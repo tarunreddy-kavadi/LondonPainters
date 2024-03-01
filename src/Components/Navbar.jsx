@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Container = styled.div`
 height: 5rem;
 display: flex;
 flex-direction:row;
-
+justify-content: center;
 align-items: center;
 padding: 1rem;
 border: 1px solid black;
@@ -23,10 +23,11 @@ const Navigation = styled.div`
 display:flex;
 align-items:center;
 font-size: 2rem;
+justify-content: space-between;
+
 .link{
 text-decoration:none;
-word-break: break-all;
-padding: 3rem
+padding-right: 1.5rem;
 };
 
 
@@ -105,8 +106,9 @@ const Navbar = () => {
         </Title>
         <Navigation>
             <Link to="/" className='link' >Home</Link>
+
             <DropDown onMouseEnter={AboutHandleOpen} onMouseLeave={AboutHandleClose}>
-                <Link to="/aboutUs" className='link' >AboutUS</Link>
+                <Link className='link' to="aboutUs">AboutUs</Link>
                 {aboutOpen &&
                     <ul className='dropList' >
                         <li className="dropItems" >

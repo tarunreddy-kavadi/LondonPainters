@@ -39,22 +39,29 @@ const ReviewContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F0F0F0;
     
 `
 const ReviewCards = styled.div` 
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-     margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
     padding: 1rem;
-    
+  
+   
 `
 const ReviewCard = styled.div`
-    height: 20rem;
-    width: 35rem;
-    border: 1px solid black;
-    
+    flex:50%;
+    min-height: 15rem;
+    width: 30rem;
+    padding: 2rem;
+    border-radius: 1rem;
+      background-color: #FFFFFF;
+     &:hover{
+    box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.16); ;
+    }
 `
 const Reviews = () => {
     return <Container>
@@ -72,7 +79,7 @@ const Reviews = () => {
                                 <h2>{props.title}</h2>
                                 ⭐⭐⭐⭐⭐
                                 <p>{props.desc}</p>
-                                <h3>{props.loc}</h3>
+                                <h4>Location:{props.loc}</h4>
                             </ReviewCard>
                         </ReviewCards>
                     })}

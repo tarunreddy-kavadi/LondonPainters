@@ -153,4 +153,16 @@ export const ReviewData = [
         desc: "Very happy with the work Would have them back again Will recommend them to family and friends",
         loc: "HP1 December 2023"
     },
+    {
+        id: 5,
+        title: "Painted alley wall 75 Verified Review",
+        desc: "Very happy with the work Would have them back again Will recommend them to family and friends",
+        loc: "HP1 December 2023"
+    },
+    {
+        id: 6,
+        title: "Painted alley wall 75 Verified Review",
+        desc: "Very happy with the work Would have them back again Will recommend them to family and friends",
+        loc: "HP1 December 2023"
+    },
 ]
