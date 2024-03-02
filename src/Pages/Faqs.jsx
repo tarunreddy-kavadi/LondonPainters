@@ -30,11 +30,55 @@ align-items: center;
     h1{
         color: white;
         font-size: 3rem;
+     
     }
 `;
 const QuestionContainer = styled.div`
 
 `
+const Questions = styled.div`
+/* height: 3rem;
+width:50rem; */
+border: 1px solid black; 
+.svg-shape{
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: -1;
+    color:white;
+
+};
+.path{
+
+}
+
+`;
+const ShapeTop = styled.div`
+position: absolute;
+background-color: white;
+height:1rem;
+width: 1rem;
+border: 1px solid black;
+transform: rotate(215deg);
+bottom: 6.9rem;
+left: 3rem;
+border-right:none;
+border-bottom: none;
+`
+const ShapeBottom = styled.div`
+position: absolute;
+background-color: white;
+height:1rem;
+width: 1rem;
+border: 1px solid black;
+transform: rotate(135deg);
+bottom: 3.9rem;
+left: 3rem;
+border-left:none;
+border-bottom: none;
+`
+
+
 const Faqs = () => {
     return <Container>
         <Layout>
@@ -45,6 +89,23 @@ const Faqs = () => {
             </BgImage>
             <QuestionContainer>
                 <p>Welcome to the Universal Painters FAQ page! Here, you’ll find detailed answers to the most frequently asked questions (FAQs) about our services, products, and processes. We’ve gathered this information to ensure you have a clear and comprehensive understanding of how we can transform your residential, commercial, or industrial property with our expert painting and coating solutions. Please read FAQs below to find helpful insights and tips tailored to your needs, and if you have any further queries, we’re just a call or email away!</p>
+                <h2>Frequently Asked Questions (FAQ)</h2>
+                <Questions>
+                    <svg
+                        className='svg-shape'
+                        x="0px"
+                        y="0px"
+                        viewBox='0 0 541 64'
+                        height='64'
+                    >
+                        <h3>hdbjkhbf</h3>
+                        <polygon
+                            className='path'
+                            points='85,55 81,55 51,55 42.5,64 34,55 0,55 0,0 34.4,0 42.5,9.5 50.6,0 81,0 85,0 541,0 541,55'
+                        >
+                        </polygon>
+                    </svg>
+                </Questions>
             </QuestionContainer>
         </Layout>
     </Container>
