@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../Layout';
+import { Translate } from '@mui/icons-material';
 
 const Container = styled.div`
 height:100rem;
@@ -35,25 +36,17 @@ align-items: center;
 `;
 const QuestionContainer = styled.div`
 `
-const Text = styled.div`
-    display: flex;
-    align-items: center;
-    
-    z-index: 1;
-    position: relative;
-`
 const Questions = styled.div`
-/* height: 3rem;
-width:50rem; */
-border: 1px solid black; 
-text-anchor: middle;
+background-color: transparent;
+padding: 0;
+border-bottom: 0 solid #000;
+
 
 .svg-shape{
     display: flex;
     top:0;
     left:0;
     width: 100%;
-   
     color: white;
     border-image: stretch;
     border-image-repeat: stretch;
@@ -61,33 +54,13 @@ text-anchor: middle;
     z-index:auto;
     background-color: white;
 };
-
+.path{
+    z-index: -1;
+}
 
 `;
-const ShapeTop = styled.div`
-position: absolute;
-background-color: white;
-height:1rem;
-width: 1rem;
-border: 1px solid black;
-transform: rotate(215deg);
-bottom: 6.9rem;
-left: 3rem;
-border-right:none;
-border-bottom: none;
-`
-const ShapeBottom = styled.div`
-position: absolute;
-background-color: white;
-height:1rem;
-width: 1rem;
-border: 1px solid black;
-transform: rotate(135deg);
-bottom: 3.9rem;
-left: 3rem;
-border-left:none;
-border-bottom: none;
-`
+
+
 
 
 const Faqs = () => {
@@ -101,29 +74,38 @@ const Faqs = () => {
             <QuestionContainer>
                 <p>Welcome to the Universal Painters FAQ page! Here, you’ll find detailed answers to the most frequently asked questions (FAQs) about our services, products, and processes. We’ve gathered this information to ensure you have a clear and comprehensive understanding of how we can transform your residential, commercial, or industrial property with our expert painting and coating solutions. Please read FAQs below to find helpful insights and tips tailored to your needs, and if you have any further queries, we’re just a call or email away!</p>
                 <h2>Frequently Asked Questions (FAQ)</h2>
-                <Text>
 
-                    <Questions>
-                        <text >jnhdksjn</text>
+
+                <Questions>
+
+                    <a href='#' style={{ color: 'black', zIndex: '-1', }}>
+                        <span style={{ display: '-webkit-box', marginLeft: '50rem', }}>hello</span>
                         <svg
                             className='svg-shape'
                             x="0px"
                             y="0px"
                             viewBox='0 0 541 64'
                             height='64'
-                            backGroundColor='white'
                         >
-                            <text x="10" y="40" fontSize="20" fill="white" color='white' style={{ zIndex: '-1' }}>
-                                Hello, SVG!
-                            </text>
                             <polygon
                                 className='path'
+                                fill='orange'
+                                pointerEvents='all'
                                 points='85,55 81,55 51,55 42.5,64 34,55 0,55 0,0 34.4,0 42.5,9.5 50.6,0 81,0 85,0 541,0 541,55'
                             >
+
                             </polygon>
+                            <text fontSize="20" fill="none" textAnchor='middle' style={{
+                                zIndex: '999', position: 'relative', color: 'black'
+                            }}>
+                                Hello, SVG!
+                            </text>
+
                         </svg>
-                    </Questions>
-                </Text>
+                    </a>
+
+                </Questions>
+
             </QuestionContainer>
         </Layout>
     </Container>
