@@ -1,7 +1,9 @@
 import React from 'react'
+import { useState } from 'react';
 import styled from 'styled-components'
 import Layout from '../Layout';
-import { Translate } from '@mui/icons-material';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { ContactSupportOutlined } from '@mui/icons-material';
 
 const Container = styled.div`
 
@@ -46,29 +48,26 @@ overflow: hidden;
 border-bottom: 1px solid black;
 `
 const QuestionContianer = styled.div`
-position:relative;
 display: flex;
-align-items: center;
+justify-content: center;
 border-bottom: 1px solid #000;
-height: 10rem;
-width: 40rem;
+height: 10%;
+width: 100%;
+
 
 `
 const Questions = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 background-color: transparent;
-justify-content: center;
 padding:0;
-
-
 
 .svg-shape{
    position: absolute;
     top:0;
     left:0;
-    height: auto;
-    width: 40rem;
+    width: 100%;
+ height:auto;
 
 };
 .path{
@@ -76,9 +75,25 @@ padding:0;
 }
 
 `;
+const Button = styled.div`
+    margin-left: 20rem;
+`
+const Box = styled.div`
 
+    height: 5rem;
+    width: 40rem;
+    border: 1px solid black;
+`
 
 const Faqs = () => {
+
+    const [isOpen, setIsOpen] = useState(false)
+    console.log(isOpen)
+    const handleClick = (e) => {
+        e.preventDefault();
+        setIsOpen((prev) => (!prev))
+    }
+
     return <Container>
         <Layout>
             <Wrapper>
@@ -91,10 +106,15 @@ const Faqs = () => {
                     <p>Welcome to the Universal Painters FAQ page! Here, you’ll find detailed answers to the most frequently asked questions (FAQs) about our services, products, and processes. We’ve gathered this information to ensure you have a clear and comprehensive understanding of how we can transform your residential, commercial, or industrial property with our expert painting and coating solutions. Please read FAQs below to find helpful insights and tips tailored to your needs, and if you have any further queries, we’re just a call or email away!</p>
                     <h2>Frequently Asked Questions (FAQ)</h2>
                 </SubHeading>
+
                 <QuestionContianer>
                     <Questions>
-                        <a href="#" style={{ color: 'black', display: 'flex', alignItems: 'center', position: 'relative' }}>
+                        <a href="#collapse" onClick={handleClick} style={{
+                            color: 'black', display: 'flex', alignItems: 'center', position: 'relative', padding: '1.5rem ', textDecoration: 'none'
+                        }}>
                             <span style={{ zIndex: '1', display: 'inline-block', }} >What is External Wall Coating?</span>
+                            <Button ><KeyboardArrowDownIcon /></Button>
+
                             <svg
                                 className='svg-shape'
                                 x="0px"
@@ -112,8 +132,13 @@ const Faqs = () => {
                                 </polygon>
                             </svg>
                         </a>
+                        {isOpen && <Box>
+                            <h2>hi</h2>
+                        </Box>}
+
                     </Questions>
                 </QuestionContianer>
+
             </Wrapper>
         </Layout>
     </Container>
