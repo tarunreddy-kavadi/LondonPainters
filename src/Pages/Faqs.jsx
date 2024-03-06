@@ -4,8 +4,11 @@ import Layout from '../Layout';
 import { Translate } from '@mui/icons-material';
 
 const Container = styled.div`
-height:100rem;
+
 `;
+const Wrapper = styled.div`
+height:100rem;
+`
 const BgImage = styled.div`
      height:20rem;
     width:98.9vw;
@@ -37,34 +40,36 @@ align-items: center;
 const SubHeading = styled.div`
 display:flex;
 flex-direction: column;
+align-items: center;
 margin-bottom:2rem;
 overflow: hidden;
 border-bottom: 1px solid black;
-
-
 `
 const QuestionContianer = styled.div`
-height: 50rem;
+position:relative;
+display: flex;
+align-items: center;
+border-bottom: 1px solid #000;
+height: 10rem;
+width: 40rem;
+
 `
 const Questions = styled.div`
-margin-top: 5rem;
+display: flex;
+flex-direction: row;
 background-color: transparent;
-padding: 0rem;
-border-bottom: 0 solid #000;
+justify-content: center;
+padding:0;
 
-height:4rem;
-width:80rem ;
+
 
 .svg-shape{
+   position: absolute;
     top:0;
     left:0;
-   width: 100%;
-    margin: -2.5rem;
-     z-index:-1;
-    border-image: stretch;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-   
+    height: auto;
+    width: 40rem;
+
 };
 .path{
     z-index: -1;
@@ -73,44 +78,43 @@ width:80rem ;
 `;
 
 
-
-
 const Faqs = () => {
     return <Container>
         <Layout>
-            <BgImage>
-                <Overlay>
-                    <h1>FAQ'S</h1>
-                </Overlay>
-            </BgImage>
-            <SubHeading>
-                <p>Welcome to the Universal Painters FAQ page! Here, you’ll find detailed answers to the most frequently asked questions (FAQs) about our services, products, and processes. We’ve gathered this information to ensure you have a clear and comprehensive understanding of how we can transform your residential, commercial, or industrial property with our expert painting and coating solutions. Please read FAQs below to find helpful insights and tips tailored to your needs, and if you have any further queries, we’re just a call or email away!</p>
-                <h2>Frequently Asked Questions (FAQ)</h2>
-            </SubHeading>
-            <QuestionContianer>
-                <Questions>
-                    <a style={{ color: 'black', display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                        <span style={{ zIndex: '1', position: 'absolute' }} >What is External Wall Coating?</span>
-                        <svg
-                            className='svg-shape'
-                            x="0px"
-                            y="0px"
-                            viewBox='0 0 541 64'
-                            height='64'
-                            preserveAspectRatio='none'
-                        >
-                            <polygon
-                                className='path'
-                                fill='transparent'
-                                pointerEvents='all'
-                                stroke='red'
-                                points='85,55 81,55 51,55 42.5,64 34,55 0,55 0,0 34.4,0 42.5,9.5 50.6,0 81,0 85,0 541,0 541,55'
+            <Wrapper>
+                <BgImage>
+                    <Overlay>
+                        <h1>FAQ'S</h1>
+                    </Overlay>
+                </BgImage>
+                <SubHeading>
+                    <p>Welcome to the Universal Painters FAQ page! Here, you’ll find detailed answers to the most frequently asked questions (FAQs) about our services, products, and processes. We’ve gathered this information to ensure you have a clear and comprehensive understanding of how we can transform your residential, commercial, or industrial property with our expert painting and coating solutions. Please read FAQs below to find helpful insights and tips tailored to your needs, and if you have any further queries, we’re just a call or email away!</p>
+                    <h2>Frequently Asked Questions (FAQ)</h2>
+                </SubHeading>
+                <QuestionContianer>
+                    <Questions>
+                        <a href="#" style={{ color: 'black', display: 'flex', alignItems: 'center', position: 'relative' }}>
+                            <span style={{ zIndex: '1', display: 'inline-block', }} >What is External Wall Coating?</span>
+                            <svg
+                                className='svg-shape'
+                                x="0px"
+                                y="0px"
+                                viewBox='0 0 541 64'
+                                height='64'
                             >
-                            </polygon>
-                        </svg>
-                    </a>
-                </Questions>
-            </QuestionContianer>
+                                <polygon
+                                    className='path'
+                                    fill='transparent'
+                                    pointerEvents='all'
+                                    stroke='red'
+                                    points='85,55 81,55 51,55 42.5,64 34,55 0,55 0,0 34.4,0 42.5,9.5 50.6,0 81,0 85,0 541,0 541,55'
+                                >
+                                </polygon>
+                            </svg>
+                        </a>
+                    </Questions>
+                </QuestionContianer>
+            </Wrapper>
         </Layout>
     </Container>
 }
