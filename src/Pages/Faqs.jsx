@@ -77,18 +77,22 @@ padding:0;
 `;
 const Button = styled.div`
     margin-left: 20rem;
+  
 `
 const Box = styled.div`
-
-    height: 5rem;
+    height: auto;
     width: 40rem;
     border: 1px solid black;
+    
+`;
+const Text = styled.div`
+padding:2rem;
+
 `
 
 const Faqs = () => {
 
     const [isOpen, setIsOpen] = useState(false)
-    console.log(isOpen)
     const handleClick = (e) => {
         e.preventDefault();
         setIsOpen((prev) => (!prev))
@@ -115,6 +119,7 @@ const Faqs = () => {
                             <span style={{ zIndex: '1', display: 'inline-block', }} >What is External Wall Coating?</span>
                             <Button ><KeyboardArrowDownIcon /></Button>
 
+
                             <svg
                                 className='svg-shape'
                                 x="0px"
@@ -133,7 +138,9 @@ const Faqs = () => {
                             </svg>
                         </a>
                         {isOpen && <Box>
-                            <h2>hi</h2>
+                            <Text>
+                                <h2>hu there</h2>
+                            </Text>
                         </Box>}
 
                     </Questions>
