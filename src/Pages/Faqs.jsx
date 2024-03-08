@@ -96,6 +96,7 @@ const Faqs = () => {
     const handleClick = (e) => {
         e.preventDefault();
         setIsOpen((prev) => (!prev))
+        down.style.visibility="hidden"
     }
 
     return <Container>
@@ -117,7 +118,7 @@ const Faqs = () => {
                             color: 'black', display: 'flex', alignItems: 'center', position: 'relative', padding: '1.5rem ', textDecoration: 'none'
                         }}>
                             <span style={{ zIndex: '1', display: 'inline-block', }} >What is External Wall Coating?</span>
-                            <Button ><KeyboardArrowDownIcon /></Button>
+                            <Button id="down" ><KeyboardArrowDownIcon /></Button>
 
 
                             <svg
