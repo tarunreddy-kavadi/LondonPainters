@@ -166,3 +166,20 @@ export const ReviewData = [
         loc: "HP1 December 2023"
     },
 ]
+export const FaqData = [
+    {
+        id: 1,
+        question: "What is an external coating ?",
+        ans: "An external wall coating is a protective and decorative coating applied to the exterior walls of a building. It acts as a barrier, providing long-lasting protection against weathering, moisture, UV rays, and other environmental factors. It can also enhance the aesthetics of your home, offering a fresh and attractive appearance."
+    },
+    {
+        id: 2,
+        question: "What is an  ?",
+        ans: "offering a fresh and attractive appearance."
+    },
+    {
+        id: 3,
+        question: "What is an external  ?",
+        ans: "An external wall coating is a protective and decorative coating applied to the exterior walls of a building. It acts as a barrier, providing long-lasting protection against weathering, moisture, UV rays, and other environmental factors. It can also enhance the aesthetics of your home, offering a fresh and attractive appearance."
+    }
+]

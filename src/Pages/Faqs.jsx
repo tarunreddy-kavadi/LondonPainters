@@ -3,7 +3,8 @@ import { useState } from 'react';
 import styled from 'styled-components'
 import Layout from '../Layout';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { ContactSupportOutlined } from '@mui/icons-material';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { FaqData } from '../data';
 
 const Container = styled.div`
 
@@ -50,52 +51,50 @@ border-bottom: 1px solid black;
 const QuestionContianer = styled.div`
 display: flex;
 justify-content: center;
-border-bottom: 1px solid #000;
-height: 10%;
-width: 100%;
-
-
+align-items: center;
+flex-direction: column;
+width: 99%;
 `
 const Questions = styled.div`
 display: flex;
 flex-direction: column;
-background-color: transparent;
 padding:0;
+margin-top: 1rem;
+
 
 .svg-shape{
-   position: absolute;
+    position: absolute;
     top:0;
     left:0;
-    width: 100%;
- height:auto;
+   
+    z-index: -1;
 
 };
-.path{
-    z-index: -1;
-}
-
 `;
 const Button = styled.div`
-    margin-left: 20rem;
-  
-`
+    margin-left: 32rem;
+   
+`;
 const Box = styled.div`
-    height: auto;
-    width: 40rem;
+    display: flex;
+    width: 49.9rem;
     border: 1px solid black;
     
 `;
 const Text = styled.div`
 padding:2rem;
+text-align: center;
 
 `
 
 const Faqs = () => {
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState({})
+
     const handleClick = (e) => {
         e.preventDefault();
-        setIsOpen((prev) => (!prev))
+        setIsOpen(!isOpen)
+
     }
 
     return <Container>
@@ -112,43 +111,54 @@ const Faqs = () => {
                 </SubHeading>
 
                 <QuestionContianer>
-                    <Questions>
-                        <a href="#collapse" onClick={handleClick} style={{
-                            color: 'black', display: 'flex', alignItems: 'center', position: 'relative', padding: '1.5rem ', textDecoration: 'none'
-                        }}>
-                            <span style={{ zIndex: '1', display: 'inline-block', }} >What is External Wall Coating?</span>
-                            <Button ><KeyboardArrowDownIcon /></Button>
+                    {FaqData.map((props) => {
+                        return <Questions key={props.id}>
 
-
-                            <svg
-                                className='svg-shape'
-                                x="0px"
-                                y="0px"
-                                viewBox='0 0 541 64'
-                                height='64'
-                            >
-                                <polygon
-                                    className='path'
-                                    fill='transparent'
-                                    pointerEvents='all'
-                                    stroke='red'
-                                    points='85,55 81,55 51,55 42.5,64 34,55 0,55 0,0 34.4,0 42.5,9.5 50.6,0 81,0 85,0 541,0 541,55'
+                            <a className='label' href="#collapse" onClick={() => setIsOpen({ isOpen, [props.id]: !isOpen[props.id] })} style={{
+                                color: 'black',
+                                display: 'flex',
+                                alignItems: 'center',
+                                position: 'relative',
+                                padding: '0.5rem ',
+                                textDecoration: 'none',
+                                zIndex: '1',
+                                height: '2.5rem'
+                            }}>
+                                <span style={{ display: 'inline-block', }} >{props.question}</span>
+                                <Button>{isOpen[props.id] ? <ArrowUpwardIcon /> : <KeyboardArrowDownIcon />}</Button>
+                                {console.log(isOpen[props.id])}
+                                <svg
+                                    className='svg-shape'
+                                    x="0px"
+                                    y="0px"
+                                    viewBox='0 0 800 64'
+                                    height='64'
                                 >
-                                </polygon>
-                            </svg>
-                        </a>
-                        {isOpen && <Box>
-                            <Text>
-                                <h2>hu there</h2>
-                            </Text>
-                        </Box>}
+                                    <polygon
+                                        className='path'
+                                        fill={isOpen[props.id] ? 'blue' : 'transparent'}
+                                        pointerEvents='all'
+                                        stroke='red'
+                                        points='85,55 81,55 51,55 42.5,64 34,55 0,55 0,0 34.4,0 42.5,9.5 50.6,0 81,0 85,0 800,0 800,55'
+                                    >
+                                    </polygon>
+                                </svg>
+                            </a>
+                            {
+                                isOpen[props.id] && <Box>
+                                    <Text>
+                                        <p>{props.ans}</p>
+                                    </Text>
+                                </Box>
+                            }
 
-                    </Questions>
+                        </Questions>
+                    })}
                 </QuestionContianer>
 
             </Wrapper>
         </Layout>
-    </Container>
+    </Container >
 }
 
 export default Faqs
