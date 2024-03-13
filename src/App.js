@@ -6,6 +6,7 @@ import ContactUs from './Pages/ContactUs'
 import Faqs from './Pages/Faqs';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Reviews from './Pages/Reviews';
+import PandD from './Pages/PandD';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path='/faqs' element={<Faqs />} />
+        <Route path='/p&d' element={<PandD />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -8,7 +8,7 @@ display: flex;
 flex-direction:row;
 justify-content: center;
 align-items: center;
-padding: 1rem;
+padding: 1.5rem;
 border: 1px solid black;
 `
 const Title = styled.span`
@@ -24,12 +24,14 @@ display:flex;
 align-items:center;
 font-size: 2rem;
 justify-content: space-between;
+padding: 3rem;
+
 
 .link{
 text-decoration:none;
 padding-right: 1.5rem;
+font-size: 1.5rem;
 };
-
 
 `
 const Estimate = styled(Link)`
@@ -55,7 +57,7 @@ text-decoration: none;
 .dropList{
 position: absolute;
 padding-left: 0rem;
-padding-top: 5rem;
+padding-top: 1.5rem;
 z-index: 1;
 }
 .dropItems{    
@@ -120,7 +122,7 @@ const Navbar = () => {
             </DropDown>
 
             <DropDown onMouseEnter={ServiceHandleOpen} onMouseLeave={ServiceHandleClose}>
-                <Link className="link" to="/contactUs" >ContactUs</Link>
+                <Link className="link" to="/contactUs" >Services</Link>
                 {ServiesOpen &&
                     <ul className='dropList' >
                         <li className="dropItems" >
@@ -129,9 +131,10 @@ const Navbar = () => {
                             <Link className='links' to="">blog</Link>
                         </li>
                     </ul>
-
                 }
             </DropDown>
+            <Link to="" className='link'>Gallery</Link>
+            <Link to="" className='link'>ContactUs</Link>
         </Navigation>
         <Estimate>
             Free Estimation
