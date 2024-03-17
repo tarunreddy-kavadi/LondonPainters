@@ -49,8 +49,7 @@ const ReviewCards = styled.div`
     flex-direction: row;
     justify-content: center;
     padding: 1rem;
-  
-   
+
 `
 const ReviewCard = styled.div`
     flex:50%;

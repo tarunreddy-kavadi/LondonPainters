@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../Layout'
+import { PnDData } from '../data'
 
 const Contianer = styled.div`
 height: 100rem;
@@ -34,7 +35,32 @@ display:flex;
 flex-direction: column;
 align-items: center;
 `
+const CardsContainer = styled.div`
+padding:5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+`
 const Cards = styled.div`
+
+    padding:1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+`
+const Card = styled.div`
+display: grid;
+padding:1.5rem;
+height:30rem;
+width:20rem;
+
+align-items: center;
+border:1px solid black;
+`
+const Image = styled.img`
+    height: 6rem;
+    width: 10rem;
 `
 const PandD = () => {
     return <Layout>
@@ -47,9 +73,19 @@ const PandD = () => {
                     <h1>External Wall Coating Specialists</h1>
                     <h3>What Are External Wall Coatings?</h3>
                 </Title>
-                <Cards>
-
-                </Cards>
+                <CardsContainer>
+                    <Cards>
+                        {PnDData.map((props) => {
+                            return <Cards key={props.id}>
+                                <Card>
+                                    <Image src={props.img} />
+                                    <h3>{props.title}</h3>
+                                    <p>{props.desc}</p>
+                                </Card>
+                            </Cards>
+                        })}
+                    </Cards>
+                </CardsContainer>
             </Content>
         </Contianer>
     </Layout>

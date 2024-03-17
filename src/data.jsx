@@ -183,3 +183,42 @@ export const FaqData = [
         ans: "An external wall coating is a protective and decorative coating applied to the exterior walls of a building. It acts as a barrier, providing long-lasting protection against weathering, moisture, UV rays, and other environmental factors. It can also enhance the aesthetics of your home, offering a fresh and attractive appearance."
     }
 ]
+
+export const PnDData = [
+    {
+        id: 1,
+        img: "https://universalpainters.co.uk/wp-content/uploads/2023/09/6.png",
+        title: "Improved Insulation",
+        desc: "Wall coatings, especially those with thermal properties, offer enhanced insulation for your home. They help to reduce heat transfer, keeping your interiors cooler in the summer and warmer in the winter. This can lead to energy savings by reducing the reliance on heating and cooling systems."
+    },
+    {
+        id: 2,
+        img: "https://universalpainters.co.uk/wp-content/uploads/2023/09/5.png",
+        title: "Enhanced Protection",
+        desc: "Wall coatings provide an additional layer of protection for your home’s exterior surfaces, shielding them from weather elements such as rain, wind, and UV rays. This helps to prevent damage, cracking, and fading, ensuring your walls stay in good condition for longer."
+    },
+    {
+        id: 3,
+        img: "https://universalpainters.co.uk/wp-content/uploads/2023/09/4.png",
+        title: "Aesthetic and Stylish Finish",
+        desc: "Wall coatings come in a wide range of colours and finishes, allowing you to transform the appearance of your home and give it a fresh, updated look. Whether you prefer a smooth or textured finish, there is a coating option to suit your style and enhance your home’s curb appeal."
+    },
+    {
+        id: 4,
+        img: "https://universalpainters.co.uk/wp-content/uploads/2023/09/3-1.png",
+        title: "Low Maintenance",
+        desc: "Once applied, wall coatings require minimal maintenance. They are easy to clean and resistant to dirt, grime, and pollutants. A simple wash or gentle pressure wash is usually sufficient to keep your walls looking clean and vibrant. This saves you time and effort on regular maintenance tasks."
+    },
+    {
+        id: 5,
+        img: "https://universalpainters.co.uk/wp-content/uploads/2023/09/2-1.png",
+        title: "Moisture Protection",
+        desc: "Wall coatings act as a barrier against moisture infiltration, preventing water damage, dampness, and mould growth. This is particularly beneficial for homes located in areas with high humidity or prone to heavy rainfall. The coatings create a waterproof seal, keeping your walls dry and protected."
+    },
+    {
+        id: 6,
+        img: "https://universalpainters.co.uk/wp-content/uploads/2023/09/1-1-1.png",
+        title: "High Durability",
+        desc: "Wall coatings are designed to withstand the test of time. They are highly durable and resistant to wear and tear, ensuring that your walls maintain their appearance and integrity for years to come. This eliminates the need for frequent repainting or repairs, saving you time and money in the long run."
+    },
+]
