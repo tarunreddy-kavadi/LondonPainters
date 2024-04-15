@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../Layout'
-import { PnDData } from '../data'
+import { PnDData, slideData2 } from '../data'
 
 const Contianer = styled.div`
-height: 100rem;
+height: 150rem;
 `
 const TitleBgImg = styled.div`
 display: flex;
@@ -42,7 +42,6 @@ flex-direction: column;
 align-items: center;
 `
 const Cards = styled.div`
-
     padding:1rem;
     display: flex;
     flex-direction: row;
@@ -51,16 +50,34 @@ const Cards = styled.div`
 `
 const Card = styled.div`
 display: grid;
-padding:1.5rem;
+grid-template-rows: 12rem 4rem 15rem;
+padding:2.5rem;
 height:30rem;
 width:20rem;
+justify-content: center;
+border-radius: 1.5rem;
 
-align-items: center;
-border:1px solid black;
+&:hover{
+box-shadow:0px 204px 204px -60px rgba(0, 0, 0, 0.16);}
 `
 const Image = styled.img`
-    height: 6rem;
+    height: 10rem;
     width: 10rem;
+`
+const Heading = styled.h3`
+font-size:1.5rem;
+`
+const Desc = styled.p`
+font-size: large;
+color:rgb(142, 145, 170);
+`
+const ExternalWall = styled.div`
+    
+`
+const BgImage = styled.div`
+height: 45rem;
+width: 50rem;
+ background-image: url(${props => props.data.bg});
 `
 const PandD = () => {
     return <Layout>
@@ -79,14 +96,23 @@ const PandD = () => {
                             return <Cards key={props.id}>
                                 <Card>
                                     <Image src={props.img} />
-                                    <h3>{props.title}</h3>
-                                    <p>{props.desc}</p>
+                                    <Heading>{props.title}</Heading>
+                                    <Desc>{props.desc}</Desc>
                                 </Card>
                             </Cards>
                         })}
                     </Cards>
                 </CardsContainer>
             </Content>
+            <ExternalWall>
+                {
+                    slideData2.map((props) => {
+                        return (props.id === (2 && 3)) ? <BgImage data={props}>hi there</BgImage> : "no image found"
+                    })
+                }
+
+            </ExternalWall>
+
         </Contianer>
     </Layout>
 

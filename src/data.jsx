@@ -47,7 +47,7 @@ export const slideData2 = [
         title: "Commercial Contracts",
         desc: "Universal Painters is a trusted provider of intumescent painting services, offering comprehensive solutions to enhance fire safety in your property.",
         link: <Link to="" style={{ color: "white", textDecoration: 'none' }}>Learn more</Link>
-    },
+    }
 
 ]
 
