@@ -221,4 +221,14 @@ export const PnDData = [
         title: "High Durability",
         desc: "Wall coatings are designed to withstand the test of time. They are highly durable and resistant to wear and tear, ensuring that your walls maintain their appearance and integrity for years to come. This eliminates the need for frequent repainting or repairs, saving you time and money in the long run."
     },
+
 ]
+
+
+
+
+
+
+
+
+
