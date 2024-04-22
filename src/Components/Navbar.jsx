@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import ejvLogo from '../assets/ejvLogo.png'
+
 
 const Container = styled.div`
 height: 5rem;
@@ -11,12 +13,7 @@ align-items: center;
 padding: 1.5rem;
 border: 1px solid black;
 `
-const Title = styled.span`
-display:flex;
-align-items: center;
-justify-items:center;
-font-size:3rem;
-padding:2rem;
+const Logo = styled.div`
 
 `
 const Navigation = styled.div`
@@ -103,9 +100,9 @@ const Navbar = () => {
     }
 
     return <Container>
-        <Title>
-            London Painters
-        </Title>
+        <Logo>
+            <img src={ejvLogo} alt='logos' style={{ height: '6rem', width: '8rem', borderRadius: '1.5rem' }}></img>
+        </Logo>
         <Navigation>
             <Link to="/" className='link' >Home</Link>
 
