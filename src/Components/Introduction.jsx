@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import Form from './Form'
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import CloseIcon from '@mui/icons-material/Close';
+import bgImage from '../assets/image16.jpeg'
 
 
 
@@ -15,12 +16,13 @@ display:flex;
 flex-direction: column;
 align-items:flex-start;
 justify-content: center;
-background-image: url('https://images.unsplash.com/photo-1647786460409-ea9b06550e7f?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+background-image: url(${bgImage});
 background-repeat: no-repeat;
-background-size: cover;
+background-size: 100rem 90rem;
 font-size: larger;
-padding:0rem 65rem 0rem 5rem;
+padding:0rem 50rem 0rem 5rem;
 height: 60rem;
+color:white;
 `
 const Esti = styled.div`
     display: flex;
@@ -32,7 +34,7 @@ const Esti = styled.div`
     `
 const Text = styled.div`
         display:flex;
-        width:50%;
+        width:45%;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
@@ -41,8 +43,8 @@ const Text = styled.div`
     `
 const Icons = styled.div`
         display:flex;
-        flex-direction: row;
-        padding-top: 5rem;
+        flex-direction: column;
+        padding-top: 2rem;
     `;
 const BgFrame = styled.div`
         position: absolute;

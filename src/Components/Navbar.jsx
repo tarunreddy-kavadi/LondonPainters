@@ -28,6 +28,8 @@ padding: 3rem;
 text-decoration:none;
 padding-right: 1.5rem;
 font-size: 1.5rem;
+height:3rem;
+cursor:pointer;       
 };
 
 `
@@ -73,8 +75,10 @@ background: whitesmoke;
     /* height: 2rem;
     width: 11rem; */
     padding: .5rem;
+    color:white;
     text-decoration: none;
     font-size: medium;
+    background-color:gray;
     &:hover{
         background-color: blue;
       
@@ -101,25 +105,24 @@ const Navbar = () => {
 
     return <Container>
         <Logo>
-            <img src={ejvLogo} alt='logos' style={{ height: '6rem', width: '8rem', borderRadius: '1.5rem' }}></img>
+            <img src={ejvLogo} alt='logos' style={{ height: '6rem', width: '8rem' }}></img>
         </Logo>
         <Navigation>
             <Link to="/" className='link' >Home</Link>
-
             <DropDown onMouseEnter={AboutHandleOpen} onMouseLeave={AboutHandleClose}>
-                <Link className='link' to="aboutUs">AboutUs</Link>
+                <Link className='link' to="/aboutUs">AboutUs</Link>
                 {aboutOpen &&
                     <ul className='dropList' >
                         <li className="dropItems" >
-                            <Link className='links' to="">FAQS</Link>
-                            <Link className='links' to="">Reviews</Link>
-                            <Link className='links' to="">blog</Link>
+                            <Link className='links' to="/faqs">FAQS</Link>
+                            <Link className='links' to="/reviews">Reviews</Link>
+                            <Link className='links' to="/p&d">blog</Link>
                         </li>
                     </ul>}
             </DropDown>
 
             <DropDown onMouseEnter={ServiceHandleOpen} onMouseLeave={ServiceHandleClose}>
-                <Link className="link" to="/contactUs" >Services</Link>
+                <Link className="link" to="/services" >Services</Link>
                 {ServiesOpen &&
                     <ul className='dropList' >
                         <li className="dropItems" >
@@ -131,7 +134,7 @@ const Navbar = () => {
                 }
             </DropDown>
             <Link to="" className='link'>Gallery</Link>
-            <Link to="" className='link'>ContactUs</Link>
+            <Link to="/contactUs" className='link'>ContactUs</Link>
         </Navigation>
         <Estimate>
             Free Estimation
