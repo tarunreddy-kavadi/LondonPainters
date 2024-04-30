@@ -8,16 +8,21 @@ display:flex;
 .arrow{
     margin-left:30rem;
 }
-`
+`;
+const Box = styled.div`
+     display: flex;
+     width: 49.9rem;
+     border: 1px solid black;  
+`;
 
 
 const Faqs = ()=>{
 const [isOpen,setIsOpen] =useState({})
  return <Layout>
    {FaqData.map((props)=>{
-    return  <Details key={props.id}>
+    return  <Details key={props.id} open={!isOpen[props.id]}>
         <summary style={{ listStyle: 'none' }}>
-            <a onClick={() => setIsOpen({ isOpen, [props.id]: !isOpen[props.id] })} style={{
+            <a onClick={() => setIsOpen({[props.id]:!isOpen[props.id]} )} style={{
                 color: 'black',
                 display: 'flex',
                 alignItems: 'center',
@@ -53,7 +58,9 @@ const [isOpen,setIsOpen] =useState({})
                 </svg>
             </a>
         </summary>
-        <p>{props.ans}</p>
+        
+        <p>{isOpen[props.id]? <Box>{props.ans}</Box>:''}</p>
+       
 
     </Details>
    })}
