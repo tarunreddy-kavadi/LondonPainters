@@ -13,12 +13,13 @@ height: 100rem;
 `
 const Intro = styled.div`
 display:flex;
+max-width:50vw;
 flex-direction: column;
 align-items:flex-start;
 justify-content: center;
 background-image: url(${bgImage});
 background-repeat: no-repeat;
-background-size: 100rem 90rem;
+background-size: cover;
 font-size: larger;
 padding:0rem 50rem 0rem 5rem;
 height: 60rem;

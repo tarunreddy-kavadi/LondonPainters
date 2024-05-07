@@ -1,10 +1,11 @@
 import Layout from '../Layout'
-import styled from 'styled-components'
+import styled,{css} from 'styled-components'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { useState } from 'react';
 import { FaqData } from '../data';
 const Details = styled.details`
 display:flex;
+${(props) => props.isOpen.id  }
 .arrow{
     margin-left:30rem;
 }
@@ -15,9 +16,10 @@ const Faqs = ()=>{
 const [isOpen,setIsOpen] =useState({})
  return <Layout>
    {FaqData.map((props)=>{
-    return  <Details key={props.id}>
-        <summary style={{ listStyle: 'none' }}>
-            <a onClick={() => setIsOpen({ isOpen, [props.id]: !isOpen[props.id] })} style={{
+       return <Details key={props.id} isOpen={isOpen} >
+          
+        <summary style={{ listStyle: 'none' }} >
+            <a onClick={() => setIsOpen({[props.id]:!isOpen[props.id]})} style={{
                 color: 'black',
                 display: 'flex',
                 alignItems: 'center',
@@ -53,7 +55,7 @@ const [isOpen,setIsOpen] =useState({})
                 </svg>
             </a>
         </summary>
-        <p>{props.ans}</p>
+        <p>{isOpen[props.id] && props.ans} </p>
 
     </Details>
    })}
