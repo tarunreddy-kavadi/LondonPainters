@@ -1,5 +1,5 @@
 import Layout from '../Layout'
-import styled from 'styled-components'
+import styled,{css} from 'styled-components'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { useState } from 'react';
 import { FaqData } from '../data';
@@ -44,7 +44,6 @@ const SubHeading = styled.div`
 `;
 const Details = styled.details`
 display:flex;
-margin: 1rem 0rem 1rem 5rem; 
 .arrow{
     position: absolute;
     margin-left:50rem;
@@ -72,10 +71,10 @@ const [isOpen,setIsOpen] =useState({})
     </SubHeading>
 
    {FaqData.map((props)=>{
-    return  <Details key={props.id} open={!isOpen[props.id]}>
+    return  <Details key={props.id}>
         <summary style={{ listStyle: 'none' }}>
-            <a onClick={() => setIsOpen({[props.id]:!isOpen[props.id]} )} style={{
-                color: `${isOpen[props.id] ? 'white' : 'black'}`,
+            <a onClick={() => setIsOpen({ isOpen, [props.id]: !isOpen[props.id] })} style={{
+                color: 'black',
                 display: 'flex',
                 alignItems: 'center',
                 position: 'relative',
@@ -112,7 +111,7 @@ const [isOpen,setIsOpen] =useState({})
             </a>
         </summary>
         
-        <p>{isOpen[props.id] ? <Box>{props.ans}</Box> : ''}</p>
+        <p>{isOpen[props.id]? <Box>{props.ans}</Box>:''}</p>
        
 
     </Details>
