@@ -11,7 +11,7 @@ flex-direction:row;
 justify-content: center;
 align-items: center;
 padding: 1.5rem;
-border: 1px solid black;
+
 `
 const Logo = styled.div`
 

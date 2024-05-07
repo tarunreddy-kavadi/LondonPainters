@@ -170,17 +170,44 @@ export const FaqData = [
     {
         id: 1,
         question: "What is an external coating ?",
-        ans: "An external wall coating is a protective and decorative coating applied to the exterior walls of a building. It acts as a barrier, providing long-lasting protection against weathering, moisture, UV rays, and other environmental factors. It can also enhance the aesthetics of your home, offering a fresh and attractive appearance."
+        ans: `An external wall coating is a protective and decorative coating applied to the exterior walls of a building. It acts as a barrier, providing long-lasting protection against weathering, moisture, UV rays, and other environmental factors. It can also enhance the aesthetics of your home, offering a fresh and attractive appearance.`
     },
     {
         id: 2,
-        question: "What is an  ?",
-        ans: "offering a fresh and attractive appearance."
+        question: "What are the benefits of exrternal wall coatings?",
+        ans: `External wall coatings offer several benefits. They provide durable protection against the elements, preventing damage from rain, wind, and sunlight. They can also improve the thermal efficiency of your home, reducing heat loss and potentially lowering energy bills. Additionally, these coatings are available in a variety of colours and finishes, allowing you to enhance the curb appeal and value of your property.`
     },
     {
         id: 3,
-        question: "What is an external  ?",
-        ans: "An external wall coating is a protective and decorative coating applied to the exterior walls of a building. It acts as a barrier, providing long-lasting protection against weathering, moisture, UV rays, and other environmental factors. It can also enhance the aesthetics of your home, offering a fresh and attractive appearance."
+        question: "How long does an external wall coating last ?",
+        ans: `The lifespan of an external wall coating depends on various factors, such as the type of coating used, the quality of application, and the climate in which the property is located. However, high-quality coatings applied by professionals can last anywhere from 10 to 20 years or more with proper maintenance and care.`
+    },
+    {
+        id: 4,
+        question: "Will an external wall coating hide cracks and imperfections on my walls ?",
+        ans: `Yes, external wall coatings can help conceal minor cracks and imperfections on your walls. The coating forms a smooth and even surface, providing a fresh appearance and improving the overall aesthetics of your home. However, it’s important to note that significant structural issues may require separate repairs before the coating is applied.`
+    },
+    {
+        id: 5,
+        question: "Can I choose the color and finish of my external wall coating ?",
+        ans: `Yes, external wall coatings are available in a wide range of colours and finishes to suit your preferences and complement the style of your home. Whether you prefer a smooth, textured, or decorative finish, there are options to match your desired look and enhance the overall appearance of your property.`
+    },
+    {
+        id: 6,
+        question: "Is the application of external wall coatings discruptive to my daily life ?",
+        ans: `Professional application of external wall coatings is typically a straightforward process that minimises disruption to your daily life. Experienced installers work efficiently to complete the coating application with minimal inconvenience. However, it’s advisable to discuss the specific details and timeline with your chosen coating provider for a clear understanding of the process.`
+    },
+    {
+        id: 7,
+        question: "How do I maintain an external wall coating ?",
+        ans: `External wall coatings require minimal maintenance. Regular cleaning with mild detergent and water can help keep the coating looking fresh and remove any dirt or grime. It’s important to avoid abrasive cleaners or high-pressure washing, as they may damage the coating. Additionally, periodic inspections by professionals can identify any potential issues that may require attention.`
+    },
+    {
+        id: 8,
+        question: "Can external wall coatings be applied to any type of wall surface ?",
+        ans: `External wall coatings can be applied to various wall surfaces, including brick, render, concrete, and more. However, it’s essential to assess the condition of the existing wall and ensure it is suitable for coating application. Professional coating providers can evaluate your specific situation and recommend the most appropriate solution for your property.
+
+`
     }
 ]
 

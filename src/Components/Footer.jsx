@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import ejv from '../assets/ejvLogo.png'
 
 const Container = styled.div`
 height: 15rem;
-border: 1px solid black;
 display:flex;
 align-items:center;
 `
 const Left = styled.div`
 flex:1;
 padding:3rem;
-font-size: 2rem;
+img{
+    height: 6rem;
+}
 p{
     font-size:1rem;
 }
@@ -33,7 +35,7 @@ padding-right:3rem;
 const Footer = () => {
     return <Container>
         <Left>
-            London Painters
+            <img src={ejv} />
             <p>
                 Get in touch and discover how we can transform your home today! Powerful design, knowledge and expertise available for your needs.
             </p>
