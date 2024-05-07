@@ -112,7 +112,7 @@ const [isOpen,setIsOpen] =useState({})
             </a>
         </summary>
         
-        <p>{isOpen[props.id]? <Box>{props.ans}</Box>:''}</p>
+        <p>{isOpen[props.id] ? <Box>{props.ans}</Box> : ''}</p>
        
 
     </Details>
