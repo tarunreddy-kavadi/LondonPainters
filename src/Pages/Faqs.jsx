@@ -1,5 +1,6 @@
 import Layout from '../Layout'
 import styled from 'styled-components'
+import styled from 'styled-components'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { useState } from 'react';
 import { FaqData } from '../data';
@@ -44,7 +45,6 @@ const SubHeading = styled.div`
 `;
 const Details = styled.details`
 display:flex;
-margin: 1rem 0rem 1rem 20rem; 
 .arrow{
     position: absolute;
     margin-left:50rem;
