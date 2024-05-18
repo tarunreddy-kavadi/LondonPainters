@@ -20,8 +20,8 @@ justify-content: center;
 background-image: url(${bgImage});
 background-repeat: no-repeat;
 background-size: cover;
-font-size: larger;
-padding:0rem 50rem 0rem 5rem;
+
+padding:0rem 50rem 0rem 15rem;
 height: 60rem;
 color:white;
 `
@@ -35,11 +35,11 @@ const Esti = styled.div`
     `
 const Text = styled.div`
         display:flex;
-        width:45%;
+        width:40%;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding-top: 5rem;
+        padding: 7rem 4rem 0rem 0rem;
         
     `
 const Icons = styled.div`
@@ -59,6 +59,11 @@ const BgFrame = styled.div`
     `;
 
 const Button = styled.button`  
+height: 4rem;
+width:4rem;
+border-radius:3rem;
+color:blue;
+
     `;
 
 const Introduction = () => {
@@ -71,7 +76,6 @@ const Introduction = () => {
                 title='YouTube'
                 width="800"
                 height="400"
-
             >
             </iframe>
         </BgFrame>
@@ -79,19 +83,20 @@ const Introduction = () => {
     return <Container>
         <Intro>
             <h3 >YOUR LOCAL PAINTING SERVICE</h3>
-            <h1>The Residential, Commerical and Industrial Painting Specialist</h1>
+            <h1 style={{ fontSize: '4rem' }}>The Residential, Commerical and Industrial Painting Specialist</h1>
             <p>We provide Exterior Painting, Rendering, Insulation and Interior Painting solutions for Residential, Commercial and Industrial customers across London and the Home Counties.    </p>
         </Intro>
         <Esti>
             <Text>
-                <h1 style={{ fontSize: '2rem' }}>Your Exterior and Interior Painting Providers</h1>
-                <h3>Universal Painters offer a complete painting and decorating service for completely transforming your home or business!</h3>
+                <h1 style={{ fontSize: '2.5rem' }}>Your Exterior and Interior Painting Providers</h1>
+                <h3 >Universal Painters offer a complete painting and decorating service for completely transforming your home or business!</h3>
                 <p>With over 30 years of experience in the industry, we bring a wealth of knowledge and expertise to every job we undertake. Our extensive experience allows us to tackle even the most complex projects with confidence, ensuring exceptional results that exceed your expectations.</p>
 
                 <Icons>
-                    <a href="tel:123456789"><PhoneEnabledIcon /></a>
                     <h3>Call us today for more information</h3>
-                    <h2>0800 756 6653</h2>
+                    <a href="tel:123456789" style={{ fontSize: '2rem', textDecoration: 'none', }}> <PhoneEnabledIcon style={{ height: '4rem', width: '4rem', backgroundSize: 'auto', backgroundColor: '#D3D3D3', borderRadius: '3rem' }} />0800 756 6653</a>
+
+
                     {/* <ModalVideo
 				channel="youtube"
 				youtube={{ mute: 0, autoplay: 0 }}
@@ -101,7 +106,8 @@ const Introduction = () => {
                 classNames="modalView"
                             /> */}
                     {open ? videoModal("https://www.youtube.com/embed/eI4an8aSsgw") : null}
-                    <Button onClick={() => setOpen(!open)} ><YouTubeIcon /></Button>
+                    <Button onClick={() => setOpen(!open)} ><YouTubeIcon style={{ fontSize: '2rem' }} /></Button>
+                    {/* <YouTubeIcon onClick={() => setOpen(!open)} > </YouTubeIcon> */}
                 </Icons>
             </Text>
             <Form />

@@ -8,9 +8,16 @@ import Cards from '../Components/Cards'
 import Reviews from '../Components/Reviews'
 import Quote from '../Components/Quote'
 
+import styled from 'styled-components'
+
+
+
+const Container = styled.div`
+
+`
 const Home = () => {
   return (
-    <div>
+    <Container >
       <Navbar />
       <Introduction />
       <PromoImages />
@@ -19,7 +26,7 @@ const Home = () => {
       <Banner />
       <Quote />
       <Footer />
-    </div>
+    </Container>
   )
 }
 

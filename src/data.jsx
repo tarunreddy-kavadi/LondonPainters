@@ -2,6 +2,13 @@ import { Link } from "react-router-dom"
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import HandshakeIcon from '@mui/icons-material/Handshake';
+import HomeIcon from '@mui/icons-material/Home';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
+import ReviewsIcon from '@mui/icons-material/Reviews';
+import BookIcon from '@mui/icons-material/Book';
+
 
 export const slideData1 = [
     {
@@ -250,6 +257,41 @@ export const PnDData = [
     },
 
 ]
+export const MenuData = [
+    {
+        title: 'Home',
+        path: '/',
+        icon: <HomeIcon />,
+        iconOpen: <ArrowDropDownIcon />,
+        iconClose: <ArrowDropUpIcon />
+    },
+    {
+        title: 'About',
+        path: '/',
+        icon: <HomeIcon />,
+        iconOpen: <ArrowDropDownIcon />,
+        iconClose: <ArrowDropUpIcon />,
+        subNav: [
+            {
+                title: 'FAQ',
+                path: '',
+                icon: <QuestionAnswerIcon />
+            },
+            {
+                title: 'Reviews',
+                path: '',
+                icon: <ReviewsIcon />
+            },
+            {
+                title: 'Blogs',
+                path: '',
+                icon: <BookIcon />
+            }
+        ]
+    }
+
+]
+
 
 
 

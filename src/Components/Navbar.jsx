@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import ejvLogo from '../assets/ejvLogo.png'
+import ResponsiveSetup from '../Responsive/ResponsiveSetup'
+import ResMenuBar from '../Responsive/ResMenuBar'
 
 
 const Container = styled.div`
@@ -11,9 +13,27 @@ flex-direction:row;
 justify-content: center;
 align-items: center;
 padding: 1.5rem;
+${ResponsiveSetup({
+    height: '4rem',
+    padding: '0.5rem',
+    justifyContent: 'space-between'
+})}
 
 `
 const Logo = styled.div`
+img {
+    height: 6rem;
+    width: 8rem;
+
+${ResponsiveSetup({
+    height: '4rem',
+    width: '4rem'
+})}
+};
+${ResponsiveSetup({
+    display: 'flex',
+    justifyContent: 'flex-start',
+})}
 
 `
 const Navigation = styled.div`
@@ -23,13 +43,16 @@ font-size: 2rem;
 justify-content: space-between;
 padding: 3rem;
 
+${ResponsiveSetup({
+    display: 'none'
+})}
 
 .link{
 text-decoration:none;
 padding-right: 1.5rem;
 font-size: 1.5rem;
 height:3rem;
-cursor:pointer;       
+cursor:pointer;
 };
 
 `
@@ -47,7 +70,11 @@ color:white;
 &:hover {
     background-color: white;
     color:blue;
-}
+};
+
+${ResponsiveSetup({
+    display: 'none'
+})}
 `;
 const DropDown = styled.div`
 display: flex;
@@ -85,7 +112,18 @@ background: whitesmoke;
     }
 }
 `;
-
+const Menu = styled.div`
+       ${ResponsiveSetup({
+    display: 'flex',
+    justifyContent: 'flex-end',
+})}
+`
+const HamMenu = styled.div`
+    display:none;
+ ${ResponsiveSetup({
+    display: 'flex'
+})}
+`
 
 const Navbar = () => {
     const [aboutOpen, setAboutOpen] = useState(false)
@@ -105,7 +143,7 @@ const Navbar = () => {
 
     return <Container>
         <Logo>
-            <img src={ejvLogo} alt='logos' style={{ height: '6rem', width: '8rem' }}></img>
+            <img src={ejvLogo} alt='logos'></img>
         </Logo>
         <Navigation>
             <Link to="/" className='link' >Home</Link>
@@ -139,6 +177,11 @@ const Navbar = () => {
         <Estimate>
             Free Estimation
         </Estimate>
+        <Menu>
+            <HamMenu>
+                <ResMenuBar />
+            </HamMenu>
+        </Menu>
     </Container>
 }
 
