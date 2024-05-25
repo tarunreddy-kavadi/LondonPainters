@@ -6,6 +6,7 @@ import ResponsiveSetup from '../Responsive/ResponsiveSetup'
 import ResMenuBar from '../Responsive/ResMenuBar'
 
 
+
 const Container = styled.div`
 height: 5rem;
 display: flex;
@@ -121,7 +122,8 @@ const Menu = styled.div`
 const HamMenu = styled.div`
     display:none;
  ${ResponsiveSetup({
-    display: 'flex'
+    display: 'flex',
+
 })}
 `
 
