@@ -1,6 +1,5 @@
 import Layout from '../Layout'
 import styled from 'styled-components'
-import styled from 'styled-components'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { useState } from 'react';
 import { FaqData } from '../data';
