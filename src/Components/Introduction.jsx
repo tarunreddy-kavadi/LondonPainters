@@ -6,12 +6,15 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import CloseIcon from '@mui/icons-material/Close';
 import bgImage from '../assets/image16.jpeg'
 import ResponsiveSetup from '../Responsive/ResponsiveSetup';
-import { JoinFullSharp } from '@mui/icons-material';
+
 
 
 
 const Container = styled.div`
 height: 100rem;
+${ResponsiveSetup({
+    width: '100%'
+})}
 `
 const Intro = styled.div`
 display:flex;
@@ -87,20 +90,38 @@ const FormEle = styled.div`
     `;
 const Icons = styled.div`
         display:flex;
+        justify-content: center;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
         padding-top: 2rem;
+
         p{
+            display:flex;
+            flex-direction: column;
+            padding:0.5rem;
             font-weight: bold;
+            font-size: 1rem;
+            h2{
+                display:flex;
+                font-size: 2rem;
+                justify-content: center;
+            }
+            
         }
+        ${ResponsiveSetup({
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '3rem'
+
+})}
     `;
 const Phone = styled.div`
     display:flex;
-    padding:1rem;
+    padding:.5rem;
     align-items: center;
     justify-content: center;
-    height:2rem;
-    width: 2rem;
+    height:2.5rem;
+    width: 2.5rem;
     border-radius: 4rem;
     background-color: gainsboro;
 `
@@ -117,14 +138,48 @@ const BgFrame = styled.div`
 
 const Button = styled.button`  
 display:flex;
+
 align-items:center;
 justify-content: center;
-padding:1rem;
+padding:2.5rem;
 height: 3rem;
 width:3rem;
-border-radius:4rem;
-color:blue;
+border-radius:6rem;
+color:white;
 border: none;
+  -webkit-animation: glowing 1300ms infinite;
+  -moz-animation: glowing 1300ms infinite;
+  -o-animation: glowing 1300ms infinite;
+  animation: glowing 1300ms infinite;
+
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: #1a2ceb;
+      -webkit-box-shadow: 0 0 3px #591aeb;
+    }
+    50% {
+      background-color: #6919ea;
+      -webkit-box-shadow: 0 0 15px #5819ea;
+    }
+    100% {
+      background-color: #5c1aeb;
+      -webkit-box-shadow: 0 0 3px #1a21eb;
+    }
+  }
+  @keyframes glowing {
+    0% {
+      background-color: #4e1aeb;
+      box-shadow: 0 0 3px #391aeb;
+    }
+    50% {
+      background-color: #4319ea;
+      box-shadow: 0 0 15px #5819ea;
+    }
+    100% {
+      background-color: #591aeb;
+      box-shadow: 0 0 3px #471aeb;
+    }
+  }
 `;
 
 const Introduction = () => {
@@ -156,9 +211,12 @@ const Introduction = () => {
                 <p>With over 30 years of experience in the industry, we bring a wealth of knowledge and expertise to every job we undertake. Our extensive experience allows us to tackle even the most complex projects with confidence, ensuring exceptional results that exceed your expectations.</p>
 
                 <Icons>
-                    <p>Call us today for more information</p>
-                    <Phone>  <a href="tel:123456789" > <PhoneEnabledIcon /></a></Phone> 133456+
 
+                    <Phone>  <a href="tel:123456789" > <PhoneEnabledIcon style={{ fontSize: '2rem' }} /></a></Phone>
+                    <p>Call us today for more information
+                        <h2>9293725698</h2></p>
+                    {open ? videoModal("https://www.youtube.com/embed/eI4an8aSsgw") : null}
+                    <Button onClick={() => setOpen(!open)} ><YouTubeIcon style={{ fontSize: '2rem' }} /></Button>
 
                     {/* <ModalVideo
 				channel="youtube"
@@ -168,8 +226,7 @@ const Introduction = () => {
                 onClose={() => setOpen(false)}
                 classNames="modalView"
                             /> */}
-                    {open ? videoModal("https://www.youtube.com/embed/eI4an8aSsgw") : null}
-                    <Button onClick={() => setOpen(!open)} ><YouTubeIcon style={{ fontSize: '2rem' }} /></Button>
+
                     {/* <YouTubeIcon onClick={() => setOpen(!open)} > </YouTubeIcon> */}
                 </Icons>
             </Text>

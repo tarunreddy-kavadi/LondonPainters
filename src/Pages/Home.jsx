@@ -7,13 +7,20 @@ import PromoImages from '../Components/PromoImages'
 import Cards from '../Components/Cards'
 import Reviews from '../Components/Reviews'
 import Quote from '../Components/Quote'
-
 import styled from 'styled-components'
+import ResponsiveSetup from '../Responsive/ResponsiveSetup'
+
 
 
 
 const Container = styled.div`
-
+${ResponsiveSetup({
+  width: '100%',
+  height: '100%',
+  margin: '0',
+  padding: '0',
+  overflowX: 'hidden'
+})}
 `
 const Home = () => {
   return (
