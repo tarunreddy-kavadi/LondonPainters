@@ -10,6 +10,7 @@ import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 
 
+
 const Container = styled.div`
 height: 100rem;
 ${ResponsiveSetup({
@@ -124,6 +125,17 @@ const Phone = styled.div`
     width: 2.5rem;
     border-radius: 4rem;
     background-color: gainsboro;
+    .phoneIcon{
+    font-size: 2rem;
+    ${ResponsiveSetup({
+    fontSize: '1.3rem'
+})}
+    };
+    ${ResponsiveSetup({
+    height: '2rem',
+    width: '2rem',
+
+})}
 `
 const BgFrame = styled.div`
         position: absolute;
@@ -169,15 +181,15 @@ border: none;
   @keyframes glowing {
     0% {
       background-color: #4e1aeb;
-      box-shadow: 0 0 3px #391aeb;
+      box-shadow: 0px 0px 5px #391aeb;
     }
     50% {
       background-color: #4319ea;
-      box-shadow: 0 0 15px #5819ea;
+      box-shadow: 0px 0px 45px #5819ea;
     }
     100% {
       background-color: #591aeb;
-      box-shadow: 0 0 3px #471aeb;
+      box-shadow: 0 0 5px #471aeb;
     }
   }
 `;
@@ -212,7 +224,7 @@ const Introduction = () => {
 
                 <Icons>
 
-                    <Phone>  <a href="tel:123456789" > <PhoneEnabledIcon style={{ fontSize: '2rem' }} /></a></Phone>
+                    <Phone>  <a href="tel:123456789" > <PhoneEnabledIcon className='phoneIcon' /></a></Phone>
                     <p>Call us today for more information
                         <h2>9293725698</h2></p>
                     {open ? videoModal("https://www.youtube.com/embed/eI4an8aSsgw") : null}

@@ -1,24 +1,33 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { slideData1, slideData2 } from '../data'
+import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 
 const Contianer = styled.div`
     display:flex;
-    padding:5rem 0rem 20rem 0rem;
+    padding:5rem 0rem 0rem 0rem;
     flex-direction: column;
-    height:30rem;
     
-
+    
 `
 const ImgCon1 = styled.div`
     display: flex;
     flex-direction: row;
     background-color: black;
+    ${ResponsiveSetup({
+    display: 'flex',
+    flexDirection: 'column',
+})}
 `;
 const ImgCon2 = styled.div`
      display: flex;
     flex-direction: row;
+    background-color: black;
+        ${ResponsiveSetup({
+    display: 'flex',
+    flexDirection: 'column',
+})}
 `;
 const Images1 = styled.div`
 border: 1px solid black;
@@ -36,6 +45,11 @@ color: white;
  opacity: 0.7; 
  transition: .5s ease-in-out;
 };
+${ResponsiveSetup({
+    width: '100%',
+    height: '12rem',
+    padding: '40px 30px 0px 20px'
+})}
 `
 const Images2 = styled.div`
 border: 1px solid black;
@@ -53,6 +67,11 @@ color: white;
 &:hover{
 background-color: black; opacity: 0.9; transition: all .5s ease-in-out;
 };
+${ResponsiveSetup({
+    width: '100%',
+    height: '12rem',
+    padding: '40px 20px 0px 20px'
+})}
 `
 
 const PromoImages = () => {
@@ -61,7 +80,7 @@ const PromoImages = () => {
         <ImgCon1>
             {slideData1.map((props) => {
                 return <Images1 data={props} key={props.id}>
-                    <p>{props.title} </p>
+                    <h3>{props.title} </h3>
                     <p>{props.desc}</p>
                     <p >{props.link}</p>
                 </Images1>
@@ -71,7 +90,7 @@ const PromoImages = () => {
         <ImgCon2>
             {slideData2.map((props) => {
                 return <Images2 data={props} key={props.id} >
-                    <p>{props.title} </p>
+                    <h3>{props.title} </h3>
                     <p>{props.desc}</p>
                     <p>{props.link}</p>
 
