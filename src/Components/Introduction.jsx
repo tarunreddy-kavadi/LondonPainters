@@ -9,10 +9,8 @@ import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 
 
-
-
 const Container = styled.div`
-height: 100rem;
+
 ${ResponsiveSetup({
     width: '100%'
 })}
@@ -107,12 +105,11 @@ const Icons = styled.div`
                 font-size: 2rem;
                 justify-content: center;
             }
-            
         }
         ${ResponsiveSetup({
     display: 'flex',
     flexDirection: 'column',
-    margin: '3rem'
+    margin: '2rem',
 
 })}
     `;
@@ -136,7 +133,7 @@ const Phone = styled.div`
     width: '2rem',
 
 })}
-`
+`;
 const BgFrame = styled.div`
         position: absolute;
         display:flex;
@@ -150,7 +147,6 @@ const BgFrame = styled.div`
 
 const Button = styled.button`  
 display:flex;
-
 align-items:center;
 justify-content: center;
 padding:2.5rem;
@@ -191,8 +187,14 @@ border: none;
       background-color: #591aeb;
       box-shadow: 0 0 5px #471aeb;
     }
-  }
-`;
+  }`;
+const RespForm = styled.div`
+     display: none;
+  ${ResponsiveSetup({
+    display: 'flex',
+    marginTop: '2.5rem'
+})}
+`
 
 const Introduction = () => {
     const [open, setOpen] = useState(false);
@@ -229,7 +231,7 @@ const Introduction = () => {
                         <h2>9293725698</h2></p>
                     {open ? videoModal("https://www.youtube.com/embed/eI4an8aSsgw") : null}
                     <Button onClick={() => setOpen(!open)} ><YouTubeIcon style={{ fontSize: '2rem' }} /></Button>
-
+                    <RespForm><Form /></RespForm>
                     {/* <ModalVideo
 				channel="youtube"
 				youtube={{ mute: 0, autoplay: 0 }}
@@ -246,10 +248,6 @@ const Introduction = () => {
                 <Form />
             </FormEle>
         </Esti>
-
-
-
-
     </Container>
 }
 

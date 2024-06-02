@@ -9,7 +9,6 @@ const Contianer = styled.div`
     padding:5rem 0rem 0rem 0rem;
     flex-direction: column;
     
-    
 `
 const ImgCon1 = styled.div`
     display: flex;

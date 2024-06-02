@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CardsData } from '../data'
+import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 const Containetr = styled.div`
-height: 50rem;
+
 display: flex;
 flex-direction: column;
 padding:10rem;
@@ -14,12 +15,21 @@ h1{
     display: flex;
     justify-content: center;
     padding: 2rem;
-}
+};
+${ResponsiveSetup({
+    padding: '0rem'
+
+})}
 `;
 const CardsContainer = styled.div`
 display: flex;
 justify-content:space-around;
 flex-direction: row;
+${ResponsiveSetup({
+    flexDirection: 'column',
+    alignItems: 'center',
+
+})}
 `
 const Card = styled.div`
 display: flex;
@@ -36,6 +46,10 @@ background-repeat: no-repeat;
 &:hover{
 box-shadow:0.9rem 0.9rem 0.9rem 0.9rem rgba(0,0,0,0.16);;
 }
+${ResponsiveSetup({
+    width: '65%',
+    height: '20rem'
+})}
 `
 const Cards = () => {
     return <Containetr>

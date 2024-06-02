@@ -2,11 +2,11 @@ import React, { useRef } from 'react'
 import styled from 'styled-components'
 import emailjs from '@emailjs/browser'
 import { useForm } from "react-hook-form";
+import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 const Conatiner = styled.div`
 height: 37rem;
 width:30rem;
-
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -44,8 +44,12 @@ h3{
     span{
         color: red;
     }
-
-`
+    ${ResponsiveSetup({
+    boxShadow: '0px 0px 0px 0px',
+    padding: '0rem',
+    backgroundColor: 'none'
+})}
+`;
 
 const Form = () => {
     const form = useRef();

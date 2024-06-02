@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CommentData } from '../data'
+import ResponsiveSetup from '../Responsive/ResponsiveSetup';
+import bgImage from '../assets/image15.jpeg'
 
 const Container = styled.div`
 height: 120rem;
@@ -14,6 +16,13 @@ flex-direction: row;
 justify-content: space-between;
 `
 const Image = styled.img`
+${ResponsiveSetup({
+})}
+`
+const BgImage = styled.div`
+    ${ResponsiveSetup({
+    backgroundImage: `url(${bgImage})`,
+})}
 `
 const ImageReview = styled.div`
 display: flex;
@@ -27,6 +36,9 @@ h2{
 
     font-size:1.9rem;
 };
+${ResponsiveSetup({
+    padding: '0rem 0rem 0rem 30rem'
+})}
 `;
 const CommentContianer = styled.div`
     display: flex;
@@ -74,6 +86,7 @@ const Reviews = () => {
     return <Container>
         <ContainerReviews>
             <Image src="https://universalpainters.co.uk/wp-content/uploads/2021/03/roofing-img-04.jpg" alt='house'></Image>
+            <BgImage />
             <ImageReview>
                 <h1>Reviews</h1>
                 ⭐⭐⭐⭐⭐
