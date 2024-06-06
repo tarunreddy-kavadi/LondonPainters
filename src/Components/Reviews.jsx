@@ -6,22 +6,17 @@ import bgImage from '../assets/image15.jpeg'
 
 
 const Container = styled.div`
-height: 120rem;
+
 display: flex;
 flex-direction: column;
-${ResponsiveSetup({
-    justifyContent: 'space-between',
-    height: '230rem'
-})}
 `;
 const ContainerReviews = styled.div`
-height: 42rem;
+
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 ${ResponsiveSetup({
-    height: '0rem',
-    display: 'flex',
+    padding: '5rem 0rem 0rem 0rem',
     flexDirection: 'column',
     justifyContent: 'center',
 
@@ -29,8 +24,8 @@ ${ResponsiveSetup({
 `
 const Image = styled.img`
 ${ResponsiveSetup({
-    visibility: 'hidden',
-    backgroundImage: `url(${bgImage})`,
+    display: 'none',
+
 })}
 `
 // const BgImage = styled.div`
@@ -52,8 +47,10 @@ h2{
     font-size:1.9rem;
 };
 ${ResponsiveSetup({
-    height: '50rem',
+
     padding: '0rem 0rem 0rem 0rem',
+    backgroundImage: `url(${bgImage})`,
+    backgroundsize: 'contain'
 })}
 `;
 const CommentContianer = styled.div`
@@ -62,10 +59,10 @@ const CommentContianer = styled.div`
     flex-direction: row;
     padding:3rem 12rem 0rem 12rem;
     ${ResponsiveSetup({
-
-    height: '50rem',
     flexDirection: 'column',
+    alignItems: 'center',
     padding: '0rem 0rem 0rem 0rem'
+
 })}
 `
 const CommentCard = styled.div`
@@ -79,18 +76,29 @@ const CommentCard = styled.div`
         width:3rem;
         border-radius: 12rem;
     };
+    ${ResponsiveSetup({
+    marginTop: '4rem',
+    height: '20rem',
+    width: '30rem',
+})
+    }
 `;
 const Accreditations = styled.div`
 display: flex;
 flex-direction: row;
 padding: 9rem 15rem 0rem 15rem;
 ${ResponsiveSetup({
-    padding: '0rem 0rem 0rem 0rem'
+    padding: '6rem 0rem 0rem 0rem',
+    flexDirection: 'column'
 })}
 `;
 const Image1 = styled.img`
 height: 25rem;
 width: 30rem;
+${ResponsiveSetup({
+    height: '600px',
+    width: '600px'
+})}
     
 `;
 const Desc = styled.div`

@@ -3,12 +3,16 @@ import styled from 'styled-components'
 import { ExperienceData } from '../data';
 import FormatPaintIcon from '@mui/icons-material/FormatPaint';
 import Form from './Form';
+import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 const Container = styled.div`
-height: 50rem;
 display: flex;
 justify-content: center;
 align-items: flex-end;
+${ResponsiveSetup({
+    flexDirection: 'column',
+    alignItems: 'center'
+})}
 `;
 const Quotation = styled.div`
 display: flex;

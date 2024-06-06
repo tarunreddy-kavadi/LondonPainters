@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 const Container = styled.div`
 display:flex;
@@ -9,6 +10,19 @@ flex-direction: row;
 background-color: darkblue;
 background-repeat: no-repeat;
 color: white;
+ img{
+        ${ResponsiveSetup({
+    display: 'none'
+})}
+    }
+${ResponsiveSetup({
+    flexDirection: 'none',
+    marginTop: '5rem',
+    height: '20rem',
+    backgroundColor: 'white',
+    color: 'black'
+})}
+
 `
 const Text = styled.div`
     display: flex;
@@ -16,6 +30,22 @@ const Text = styled.div`
     align-items: center;
     justify-content: center;
     padding:0rem 5rem 0rem 2rem;
+    a{
+        text-decoration: none;
+        color:white;
+        ${ResponsiveSetup({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '5rem',
+    width: '100%',
+    backgroundColor: 'blue'
+})}
+    }
+    ${ResponsiveSetup({
+    padding: '0rem 0rem 0rem 0rem',
+
+})}
 
 `
 
