@@ -18,17 +18,24 @@ ${ResponsiveSetup({
 const Intro = styled.div`
 display:flex;
 flex-direction: column;
-align-items:flex-start;
 justify-content: center;
 background-image: url(${bgImage});
 background-repeat: no-repeat;
 background-size: cover;
-padding:0rem 50rem 0rem 15rem;
-height: 60rem;
+/* padding:0rem 50rem 0rem 15rem; */
+padding-left: 10rem;
+min-height: 60rem;
 color:white;
 
-h1{
+
+h1{ flex-wrap: wrap;
     font-size: 4rem;
+    max-height: 100vh;
+    max-width:30rem;
+    word-wrap: break-word;
+}
+p{
+    min-height: auto;
 }
 
 h1{
@@ -38,20 +45,15 @@ ${ResponsiveSetup({
 })}}
 
 ${ResponsiveSetup({
-    display: 'grid',
-    gridTemplateRows: '3rem 10rem 5rem',
-    backgroundSize: '600px 600px',
-    padding: '10rem 5rem 0rem 1.5rem',
-    height: '500px'
+    paddingLeft: '3rem'
 })}
 
 `;
 const Esti = styled.div`
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: initial;
-    padding: 2rem 10rem 0rem 10rem ;
+    /* padding: 2rem 5rem 0rem 5rem ; */
     margin-top:-6rem;
     ${ResponsiveSetup({
     display: 'flex',
@@ -83,6 +85,7 @@ const Text = styled.div`
 })}
     `;
 const FormEle = styled.div`
+width:40%;
  ${ResponsiveSetup({
     display: 'none'
 })}
@@ -141,7 +144,7 @@ const BgFrame = styled.div`
         justify-content: center;
         background-color: rgba(0, 0, 0, 0.8);
         height:35rem;
-        width:65rem;
+        min-width:65rem;
         translate: -1rem -34rem; 
     `;
 

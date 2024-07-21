@@ -5,22 +5,16 @@ import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 const Container = styled.div`
 display:flex;
-height: 15rem;
-flex-direction: row;
+max-height: 25rem;
 background-color: darkblue;
 background-repeat: no-repeat;
 color: white;
  img{
-        ${ResponsiveSetup({
-    display: 'none'
-})}
+    width:50%;
     }
 ${ResponsiveSetup({
-    flexDirection: 'none',
     marginTop: '5rem',
-    height: '20rem',
-    backgroundColor: 'white',
-    color: 'black'
+    maxHeight: '100rem',
 })}
 
 `
@@ -29,7 +23,8 @@ const Text = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding:0rem 5rem 0rem 2rem;
+    width:50%;
+    /* padding:0rem 5rem 0rem 2rem; */
     a{
         text-decoration: none;
         color:white;

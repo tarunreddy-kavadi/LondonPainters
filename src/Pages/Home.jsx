@@ -27,7 +27,6 @@ const Home = () => {
     <Container >
       <Navbar />
       <Introduction />
-      <PromoImages />
       <Cards />
       <Reviews />
       <Banner />

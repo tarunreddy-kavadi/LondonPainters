@@ -44,16 +44,21 @@ const SubHeading = styled.div`
 `;
 const Details = styled.details`
 display:flex;
-.arrow{
+justify-content: space-between;
+/* .arrow{
     position: absolute;
     margin-left:50rem;
+} */
+h3{
+    max-width: 100%;
+    margin:0;
 }
 `;
 const Box = styled.div`
      display: flex;
      margin-left: 6rem;
      justify-content: center;
-     width: 45rem;
+     max-width: 45rem;
      padding:2rem;  
      background-color: whitesmoke;
 `;
@@ -81,7 +86,7 @@ const [isOpen,setIsOpen] =useState({})
                 padding: '0.5rem ',
                 textDecoration: 'none',
                 zIndex: '1',
-                height: '2.5rem',
+                maxHeight: '2.5rem',
                         }}>
                 <h3>{props.question}</h3>
                 <ArrowUpwardIcon className='arrow' style={isOpen[props.id] ? { transform: 'rotate(180deg)', transition: '0.2s' } : { transform: 'rotate(0deg)', transition: '0.2s' }}> </ArrowUpwardIcon>
@@ -91,12 +96,14 @@ const [isOpen,setIsOpen] =useState({})
                         top: '0',
                         left: '0',
                         zIndex: '-1',
+                        maxHeight: '100%',
+                        maxWidth:'100%'
                         
                     }}
                     x="0px"
                     y="0px"
                     viewBox='0 0 1000 64'
-                    height='64'
+                 
                 >
 
                     <polygon

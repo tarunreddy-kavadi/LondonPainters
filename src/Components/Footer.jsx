@@ -4,55 +4,62 @@ import ejv from '../assets/ejvLogo.png'
 import ResponsiveSetup from '../Responsive/ResponsiveSetup'
 
 const Container = styled.div`
-
 display:flex;
-align-items:center;
 ${ResponsiveSetup({
+    flexDirection: 'column',
     marginTop: '3rem',
     backgroundColor: 'darkBlue',
-    color: 'whiteSmoke'
+    color: 'white'
 })}
 `
 const Left = styled.div`
 flex:1;
-padding:3rem 3rem 3rem 3rem;
+/* padding:3rem 3rem 3rem 3rem; */
 img{
     height: 6rem;
 }
 p{
     font-size:1rem;
 }
-${ResponsiveSetup({
+/* ${ResponsiveSetup({
     paddingRight: '.8rem'
-})}
+})} */
 `
 const Center = styled.div`
 flex:1;
-padding-top: 1.5rem;
-padding-right: 3rem;
 h3{
-    font-weight:bold
+    font-weight:bold;
 }
-${ResponsiveSetup({
-    paddingRight: '.8rem',
-})}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    word-wrap: break-word;
+}
 `
 const Right = styled.div`
+display: flex;
 flex:1;
-padding-top: 1.5rem;
-padding-right:3rem;
-${ResponsiveSetup({
+li{
+    list-style: none;
+}
+/* ${ResponsiveSetup({
     paddingRight: '.8rem',
     paddingTop: '9rem'
 
-})}
+})} */
 `
 const Right1 = styled.div`
-flex:1;
-padding-right:3rem;
-${ResponsiveSetup({
+display: flex;
+flex:0.5;
+li{
+    list-style: none;
+}
+/* ${ResponsiveSetup({
     paddingRight: '.8rem'
-})}
+})} */
 `
 const Footer = () => {
     return <Container>
@@ -63,26 +70,34 @@ const Footer = () => {
             </p>
         </Left>
         <Center>
-            <h3>Contact Us</h3>
-            <p>Aylesbury,
-                Buckinghamshire 0800 756 6653 + (44) 7713 697961 info@universal
-                painters.co.uk</p>
+            <ul>
+                <li> <h3>Contact Us</h3></li>
+                <li> <a href='mailto:BIBAERION@GMAIL.COM'>BIBAERION@GMAIL.COM</a></li>
+                <li><a href='tel: 07408252125'>07408252125</a></li>
+                <li><a href='https://www.instagram.com/ejvdecoratingteam/'> ejvdecoratingteam</a></li>
+            </ul>
         </Center>
         <Right>
-            <h3>Our Services</h3>
-            Commercial Contracts
-            Damp Solutions
-            Internal Insulation Paints
-            K-Rend Silicone Renders
-            Painting and Decorating
-            Thermal Cork Insulation
+
+            <ul>
+                <li><h3>Our Services</h3></li>
+                <li>General Renovations of Building & Shops</li>
+                <li>Interior & Exterior Projects</li>
+                <li>Insulation</li>
+                <li>Plastering</li>
+                <li>Wallpapers</li>
+                <li>Woodwork and Many More...</li>
+            </ul>
         </Right>
         <Right1>
-            <h3>Areas we cover</h3>
-            Oxfordshire
-            Hertfordshire
-            London
-            Buckinghamshire
+
+            <ul>
+                <li><h3>Areas we cover</h3></li>
+                <li>East London</li>
+                <li>North London</li>
+                <li>West London</li>
+                <li>South London</li>
+            </ul>
         </Right1>
     </Container>
 }

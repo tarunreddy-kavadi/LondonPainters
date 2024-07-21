@@ -3,13 +3,12 @@ import styled from 'styled-components'
 import { CardsData } from '../data'
 import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
-const Containetr = styled.div`
-
+const Container = styled.div`
 display: flex;
 flex-direction: column;
-padding:10rem;
 padding-top:0rem ;
 padding-bottom: 3rem;
+max-width:100%;
 
 h1{
     display: flex;
@@ -23,7 +22,8 @@ ${ResponsiveSetup({
 `;
 const CardsContainer = styled.div`
 display: flex;
-justify-content:space-around;
+justify-content:center;
+gap:2rem;
 flex-direction: row;
 ${ResponsiveSetup({
     flexDirection: 'column',
@@ -34,8 +34,8 @@ ${ResponsiveSetup({
 const Card = styled.div`
 display: flex;
 flex-direction: column;
-height: 25rem;
-width: 17.5rem;
+min-height: 25rem;
+max-width: 17.5rem;
 border-radius: 0.5rem;
 padding: 2.5rem;
 background-position: right;
@@ -43,6 +43,7 @@ background-position-y: bottom;
 background-size: 15rem;
 background-image:url('https://kramersseafood.com/wp-content/uploads/2021/08/KramersSeafood_umfelt_hoek.png');
 background-repeat: no-repeat;
+word-wrap: break-word;
 &:hover{
 box-shadow:0.9rem 0.9rem 0.9rem 0.9rem rgba(0,0,0,0.16);;
 }
@@ -52,7 +53,7 @@ ${ResponsiveSetup({
 })}
 `
 const Cards = () => {
-    return <Containetr>
+    return <Container>
         <h1>Why Choose Us</h1>
         <CardsContainer>
             {CardsData.map((data) => {
@@ -63,7 +64,7 @@ const Cards = () => {
                 </Card>
             })}
         </CardsContainer>
-    </Containetr>
+    </Container>
 }
 
 export default Cards

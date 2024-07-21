@@ -50,7 +50,6 @@ const ResMenuBar = () => {
   return (
     <Container>
       <Button onClick={() => setIsOpen(!isOpen)}><MenuIcon style={{ fontSize: '30px' }} /></Button>
-      {console.log(isOpen)}
       {isOpen && (
         <Options open={isOpen}>
           <CloseIcon className='cross' onClick={() => setIsOpen(!isOpen)} />

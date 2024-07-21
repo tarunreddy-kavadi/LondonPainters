@@ -11,34 +11,24 @@ display: flex;
 flex-direction: column;
 `;
 const ContainerReviews = styled.div`
-
 display: flex;
 flex-direction: row;
-justify-content: space-between;
-${ResponsiveSetup({
-    padding: '5rem 0rem 0rem 0rem',
-    flexDirection: 'column',
-    justifyContent: 'center',
-
-})}
-`
+justify-content: center;
+gap:5rem;
+`;
 const Image = styled.img`
-${ResponsiveSetup({
-    display: 'none',
+max-width:50%;
 
+${ResponsiveSetup({
+    display: 'none'
 })}
-`
-// const BgImage = styled.div`
-//     ${ResponsiveSetup({
-//     display: 'flex',
-//     backgroundImage: `url(${bgImage})`,
-//     zIndex: '1'
-// })}
-// `
+`;
+
 const ImageReview = styled.div`
 display: flex;
 flex-direction: column;
-padding: 0rem 8rem 0rem 15rem;
+max-width: 50%;
+
 h1{
     color: blue;
     font-size: 3rem;
@@ -48,16 +38,20 @@ h2{
 };
 ${ResponsiveSetup({
 
-    padding: '0rem 0rem 0rem 0rem',
+    marginTop: '5rem',
+    maxWidth: '100%',
     backgroundImage: `url(${bgImage})`,
-    backgroundsize: 'contain'
+    backgroundsize: 'cover',
+    backgroundPosition: 'center'
 })}
 `;
 const CommentContianer = styled.div`
     display: flex;
-    justify-content: space-around;
+    max-width:100%;
+    justify-content:center;
     flex-direction: row;
-    padding:3rem 12rem 0rem 12rem;
+    padding:3rem 0rem 0rem 0rem;
+    gap:2rem;
     ${ResponsiveSetup({
     flexDirection: 'column',
     alignItems: 'center',
@@ -66,8 +60,11 @@ const CommentContianer = styled.div`
 })}
 `
 const CommentCard = styled.div`
-    height:33rem;
-    width:15rem;
+display: flex;
+flex-wrap: wrap;
+word-wrap: break-word;
+    min-height:30rem;
+    max-width:15rem;
     padding: 3rem;
     border-radius: .5rem;
     box-shadow:0.9rem 0.9rem 0.9rem 0.9rem rgba(0,0,0,0.16);
@@ -78,47 +75,52 @@ const CommentCard = styled.div`
     };
     ${ResponsiveSetup({
     marginTop: '4rem',
-    height: '20rem',
-    width: '30rem',
+    minHeight: '20rem',
+    maxWidth: '30rem',
 })
     }
 `;
 const Accreditations = styled.div`
 display: flex;
-flex-direction: row;
-padding: 9rem 15rem 0rem 15rem;
+justify-content: center;
+gap:5rem;
+margin:5rem;
+/* padding: 9rem 15rem 0rem 15rem; */
 ${ResponsiveSetup({
-    padding: '6rem 0rem 0rem 0rem',
     flexDirection: 'column'
 })}
 `;
 const Image1 = styled.img`
-height: 25rem;
-width: 30rem;
+display:flex;
+min-height: 25rem;
+max-width: 50%;
 ${ResponsiveSetup({
-    height: '600px',
-    width: '600px'
+    maxWidth: '100%'
 })}
     
 `;
 const Desc = styled.div`
+
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding:0rem 5rem 0rem 5rem;
+    word-wrap: break-word;
     h1{
         font-size: 3rem;
     };
     p{
         font-size: 1.1rem;
     }
+    ${ResponsiveSetup({
+    maxWidth: '100%'
+})}
 `
 
 const Reviews = () => {
 
     return <Container>
         <ContainerReviews>
-            <Image src="https://universalpainters.co.uk/wp-content/uploads/2021/03/roofing-img-04.jpg" alt='house'></Image>
+            <Image src={bgImage} alt='house'></Image>
 
             <ImageReview>
                 <h1>Reviews</h1>

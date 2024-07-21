@@ -8,6 +8,24 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 import BookIcon from '@mui/icons-material/Book';
+import image1 from '../src/assets/image1.jpeg';
+import image2 from '../src/assets/image2.jpeg';
+import image3 from '../src/assets/image3.jpeg';
+import image4 from '../src/assets/image4.jpeg';
+import image5 from '../src/assets/image5.jpeg';
+import image6 from '../src/assets/image6.jpeg';
+import image7 from '../src/assets/image7.jpeg';
+import image8 from '../src/assets/image8.jpeg';
+import image9 from '../src/assets/image9.jpeg';
+import image10 from '../src/assets/image10.jpeg';
+import image11 from '../src/assets/image11.jpeg';
+import image12 from '../src/assets/image12.jpeg';
+import image14 from '../src/assets/image14.jpeg';
+import image15 from '../src/assets/image15.jpeg';
+import image16 from '../src/assets/image16.jpeg';
+import image17 from '../src/assets/image17.jpeg';
+import image18 from '../src/assets/image18.jpeg';
+
 
 
 export const slideData1 = [
@@ -290,6 +308,76 @@ export const MenuData = [
         ]
     }
 
+]
+export const GalleryImages = [
+    {
+        id: 1,
+        image: image1
+    },
+    {
+        id: 2,
+        image: image2
+    },
+    {
+        id: 3,
+        image: image3
+    },
+    {
+        id: 4,
+        image: image4
+    },
+    {
+        id: 5,
+        image: image5
+    },
+    {
+        id: 6,
+        image: image6
+    },
+    {
+        id: 7,
+        image: image7
+    },
+    {
+        id: 8,
+        image: image8
+    },
+    {
+        id: 9,
+        image: image9
+    },
+    {
+        id: 10,
+        image: image10
+    },
+    {
+        id: 11,
+        image: image11
+    },
+    {
+        id: 12,
+        image: image12
+    },
+    {
+        id: 14,
+        image: image14
+    },
+    {
+        id: 15,
+        image: image15
+    },
+    {
+        id: 16,
+        image: image16
+    },
+    {
+        id: 17,
+        image: image17
+    },
+    {
+        id: 18,
+        image: image18
+    },
 ]
 
 

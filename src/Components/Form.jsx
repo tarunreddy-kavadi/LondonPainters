@@ -5,8 +5,8 @@ import { useForm } from "react-hook-form";
 import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 
 const Conatiner = styled.div`
-height: 37rem;
-width:30rem;
+max-height: 100%;
+max-width:100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -17,10 +17,12 @@ box-shadow: 0px 104px 104px -40px rgba(0, 0, 0, 0.16);
 
 h3{
         display: flex;
+        max-width:100%;
         justify-content: center;    
     }
     form{
         display: flex;
+        max-width:100%;
         flex-direction:column;
     }
     .con{

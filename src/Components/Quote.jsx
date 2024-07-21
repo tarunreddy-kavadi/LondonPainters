@@ -8,37 +8,45 @@ import ResponsiveSetup from '../Responsive/ResponsiveSetup';
 const Container = styled.div`
 display: flex;
 justify-content: center;
-align-items: flex-end;
+align-items: initial;
 ${ResponsiveSetup({
     flexDirection: 'column',
     alignItems: 'center'
 })}
 `;
-const Quotation = styled.div`
-display: flex;
-flex-direction: row;
-padding: 2rem;
-    
-`;
+
 const ExpContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    width: 50%;
 
 `;
 const Experience = styled.div`
 display: flex;
-flex-direction: row;
 align-items: center;
-height: 3rem;
-width: 20rem;
+max-height: 3rem; 
+max-width: 35rem; 
 border: 1px solid black;
 padding:.5rem;
 margin-top: 1rem;
 h3{
     padding: 1rem;
-}
-`
+    @media screen and (max-width:375px) {
+        padding:0rem;
+        word-break: break-all;
+    }
+    }
+    @media screen and (max-width:375px){
+        padding:0rem;
+        max-height:none;
+        max-width:none;
+    }
+`;
+const Quotation = styled.div`
+padding: 2rem;
+min-width: 40%;
+`;
 const Quote = () => {
     return <Container>
         <ExpContainer>

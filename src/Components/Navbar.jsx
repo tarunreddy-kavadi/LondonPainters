@@ -8,12 +8,13 @@ import ResMenuBar from '../Responsive/ResMenuBar'
 
 
 const Container = styled.div`
-height: 5rem;
+min-height: 5rem;
 display: flex;
 flex-direction:row;
 justify-content: center;
 align-items: center;
-padding: 1.5rem;
+margin:1.5rem;
+gap:2rem;
 ${ResponsiveSetup({
     height: '4rem',
     padding: '0.5rem',
@@ -22,9 +23,12 @@ ${ResponsiveSetup({
 
 `
 const Logo = styled.div`
+max-width:25%;
+display: flex;
+justify-content:flex-end;
 img {
-    height: 6rem;
-    width: 8rem;
+    max-height: 6rem;
+    min-width: 50%;
 
 ${ResponsiveSetup({
     height: '4rem',
@@ -41,8 +45,9 @@ const Navigation = styled.div`
 display:flex;
 align-items:center;
 font-size: 2rem;
-justify-content: space-between;
-padding: 3rem;
+justify-content: center;
+/* padding: 3rem; */
+max-width: 50%;
 
 ${ResponsiveSetup({
     display: 'none'
@@ -59,12 +64,12 @@ cursor:pointer;
 `
 const Estimate = styled(Link)`
 height: 4rem;
-width: 13rem;
+max-width: 25%;
 display: flex;
 align-items:center;
 text-decoration:none;
 font-size: 1.5rem;
-padding-left:2rem;
+padding:.5rem;
 font-weight: bold;
 background-color: blue;
 color:white;
@@ -129,18 +134,11 @@ const HamMenu = styled.div`
 
 const Navbar = () => {
     const [aboutOpen, setAboutOpen] = useState(false)
-    const [ServiesOpen, setServiceOpen] = useState(false)
     const AboutHandleOpen = () => {
         setAboutOpen(true)
     }
     const AboutHandleClose = () => {
         setAboutOpen(false)
-    }
-    const ServiceHandleOpen = () => {
-        setServiceOpen(true)
-    }
-    const ServiceHandleClose = () => {
-        setServiceOpen(false)
     }
 
     return <Container>
@@ -160,21 +158,7 @@ const Navbar = () => {
                         </li>
                     </ul>}
             </DropDown>
-
-            <DropDown onMouseEnter={ServiceHandleOpen} onMouseLeave={ServiceHandleClose}>
-                <Link className="link" to="/services" >Services</Link>
-                {ServiesOpen &&
-                    <ul className='dropList' >
-                        <li className="dropItems" >
-                            <Link className='links' to="">FAQS</Link>
-                            <Link className='links' to="">Reviews</Link>
-                            <Link className='links' to="">blog</Link>
-                        </li>
-                    </ul>
-                }
-            </DropDown>
-            <Link to="" className='link'>Gallery</Link>
-            <Link to="/contactUs" className='link'>ContactUs</Link>
+            <Link to="/gallery" className='link'>Gallery</Link>
         </Navigation>
         <Estimate>
             Free Estimation
